@@ -10,18 +10,20 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'DM Sans', sans-serif; background: #f4f8fb; color: #0d2137; line-height: 1.6; }
 
-    /* Top Bar */
+    /* Top Bar - Original */
     .top-bar { background: #0d2137; color: #a8c4d8; padding: 6px 5%; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px; font-size: 0.75rem; }
     .top-bar span { display: flex; align-items: center; gap: 6px; }
-    .pureit-badge { display: inline-flex; align-items: center; gap: 5px; background: linear-gradient(135deg, #1a4fa0 0%, #1565c0 100%); color: white; font-size: 0.68rem; font-weight: 700; padding: 3px 10px 3px 6px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.25); white-space: nowrap; }
-    .pureit-badge .badge-icon { width: 16px; height: 16px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #1565c0; font-size: 0.55rem; font-weight: 900; }
+    .pureit-badge { display: inline-flex; align-items: center; gap: 5px; background: linear-gradient(135deg, #1a4fa0 0%, #1565c0 100%); color: white; font-size: 0.68rem; font-weight: 700; padding: 3px 10px 3px 6px; border-radius: 20px; white-space: nowrap; }
+    .pureit-badge .badge-icon { width: 16px; height: 16px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #1565c0; font-size: 0.55rem; }
 
     /* Floating WhatsApp */
-    .wa-float { position: fixed; bottom: 24px; right: 24px; z-index: 999; width: 58px; height: 58px; border-radius: 50%; background: #25D366; box-shadow: 0 4px 20px rgba(37,211,102,0.45); display: flex; align-items: center; justify-content: center; text-decoration: none; color: white; font-size: 1.7rem; transition: transform 0.2s; animation: waPulse 2.5s ease-in-out infinite; }
+    .wa-float { position: fixed; bottom: 24px; right: 24px; z-index: 999; width: 58px; height: 58px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; text-decoration: none; color: white; font-size: 1.7rem; box-shadow: 0 4px 20px rgba(37,211,102,0.45); animation: waPulse 2.5s ease-in-out infinite; }
     .wa-float:hover { transform: scale(1.1); animation: none; }
     @keyframes waPulse { 0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.45), 0 0 0 0 rgba(37,211,102,0.4); } 50% { box-shadow: 0 4px 20px rgba(37,211,102,0.45), 0 0 0 10px rgba(37,211,102,0); } }
+    .wa-float-tooltip { position: absolute; right: 68px; top: 50%; transform: translateY(-50%); background: #0d2137; color: white; padding: 6px 12px; border-radius: 8px; font-size: 0.78rem; white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity 0.2s; }
+    .wa-float:hover .wa-float-tooltip { opacity: 1; }
 
-    /* Navigation */
+    /* Navigation - Original */
     nav { background: white; padding: 0 5%; display: flex; justify-content: space-between; align-items: center; height: 64px; position: sticky; top: 0; z-index: 200; box-shadow: 0 1px 0 #e0eaf0; }
     .logo h1 { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: #0d2137; }
     .logo p { font-size: 0.65rem; color: #0e7e8c; }
@@ -37,48 +39,56 @@
     .mobile-menu { display: none; background: white; border-top: 1px solid #e0eaf0; padding: 16px 5%; flex-direction: column; gap: 14px; position: sticky; top: 64px; z-index: 199; }
     .mobile-menu.open { display: flex; }
 
-    /* Hero */
+    /* Hero - Original */
     .hero { background: linear-gradient(135deg, #0d2137 0%, #163352 100%); padding: 50px 5%; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
-    .hero h2 { font-family: 'Playfair Display', serif; font-size: 2.2rem; color: white; }
+    .hero h2 { font-family: 'Playfair Display', serif; font-size: 2.2rem; color: white; line-height: 1.3; }
     .hero h2 em { color: #e8841a; font-style: italic; }
+    .hero p { color: #8aafc8; margin: 16px 0 24px; font-size: 0.95rem; }
+    .hero-icon i { font-size: 7rem; color: #0e7e8c; opacity: 0.85; }
     .btn-primary { background: #e8841a; color: white; padding: 12px 22px; border-radius: 10px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; font-weight: 600; border: none; cursor: pointer; }
 
-    /* Category Tabs */
+    /* Category Tabs - Original */
     .cat-tabs { display: flex; justify-content: center; gap: 8px; padding: 24px 5% 16px; flex-wrap: wrap; }
     .cat-tab { background: white; border: 1.5px solid #e0eaf0; padding: 8px 18px; border-radius: 8px; cursor: pointer; font-size: 0.85rem; color: #6b8499; transition: all 0.2s; }
     .cat-tab.active { background: #0d2137; color: white; border-color: #0d2137; }
 
-    /* Products Grid */
+    /* Products Grid - Original */
     .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; padding: 12px 5% 50px; }
     .product-card { background: white; border-radius: 14px; overflow: hidden; border: 1px solid #e0eaf0; transition: box-shadow 0.2s; position: relative; }
     .product-card:hover { box-shadow: 0 8px 24px rgba(13,33,55,0.1); transform: translateY(-2px); }
-    .product-badge { position: absolute; top: 10px; left: 10px; background: #e8841a; color: white; padding: 2px 8px; border-radius: 20px; font-size: 0.68rem; font-weight: 700; }
-    .stock-badge { position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.7); color: white; padding: 2px 8px; border-radius: 20px; font-size: 0.65rem; }
+    .product-badge { position: absolute; top: 10px; left: 10px; background: #e8841a; color: white; padding: 2px 8px; border-radius: 20px; font-size: 0.68rem; font-weight: 700; z-index: 2; }
+    .stock-badge { position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.7); color: white; padding: 2px 8px; border-radius: 20px; font-size: 0.65rem; z-index: 2; }
     .stock-badge.low { background: #e8841a; }
     .stock-badge.out { background: #dc2626; }
     .product-img { background: #e8f5f7; height: 160px; display: flex; align-items: center; justify-content: center; }
     .product-img i { font-size: 3.2rem; color: #0e7e8c; }
     .product-img img { width: 100%; height: 100%; object-fit: cover; }
     .product-body { padding: 14px; }
-    .product-name { font-weight: 700; font-size: 0.95rem; }
-    .price-row { display: flex; align-items: baseline; gap: 8px; margin: 8px 0; }
+    .product-name { font-weight: 700; font-size: 0.95rem; margin-bottom: 4px; }
+    .product-desc { font-size: 0.78rem; color: #6b8499; margin-bottom: 8px; }
+    .price-row { display: flex; align-items: baseline; gap: 8px; margin-bottom: 10px; }
     .price-new { font-size: 1.2rem; font-weight: 700; color: #0d2137; }
     .price-old { text-decoration: line-through; color: #b0c4d0; font-size: 0.78rem; }
-    .btn-add-cart { width: 100%; background: #0d2137; color: white; border: none; padding: 10px; border-radius: 8px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; }
+    .courier-note { font-size: 0.68rem; color: #e8841a; margin-bottom: 3px; }
+    .btn-add-cart { width: 100%; background: #0d2137; color: white; border: none; padding: 10px; border-radius: 8px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; transition: background 0.2s; }
+    .btn-add-cart:hover { background: #0e7e8c; }
     .btn-add-cart:disabled { background: #b0c4d0; cursor: not-allowed; }
 
-    /* Commercial Banner */
+    /* Commercial Banner - Original */
     .commercial { background: linear-gradient(135deg, #0d2137 0%, #163352 100%); margin: 0 5% 50px; border-radius: 20px; padding: 36px; display: flex; justify-content: space-between; align-items: center; color: white; gap: 20px; }
+    .commercial h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; margin-bottom: 6px; }
 
-    /* Footer */
+    /* Footer - Original */
     footer { background: #0d2137; color: #7499b5; padding: 36px 5% 20px; }
-    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; }
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; margin-bottom: 24px; }
+    .footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid #1e3a56; font-size: 0.78rem; }
 
     /* Cart Sidebar */
     .overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 300; display: none; }
     .overlay.open { display: block; }
     .cart-sidebar { position: fixed; top: 0; right: -420px; width: 380px; max-width: 100vw; height: 100%; background: white; z-index: 400; transition: right 0.3s; padding: 20px; display: flex; flex-direction: column; }
     .cart-sidebar.open { right: 0; }
+    .cart-header { display: flex; justify-content: space-between; margin-bottom: 16px; }
     .cart-item { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #f0f4f7; }
     .cart-qty-controls { display: flex; align-items: center; gap: 6px; }
     .cart-qty-controls button { background: #f0f4f7; border: none; width: 26px; height: 26px; border-radius: 6px; cursor: pointer; }
@@ -90,11 +100,13 @@
     .modal-box { background: white; border-radius: 20px; width: 100%; max-width: 450px; overflow: hidden; }
     .modal-header { background: #0d2137; color: white; padding: 18px 20px; display: flex; justify-content: space-between; }
     .form-group { margin-bottom: 14px; }
-    .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 11px 14px; border: 1.5px solid #e0eaf0; border-radius: 10px; }
+    .form-group input, .form-group textarea { width: 100%; padding: 11px 14px; border: 1.5px solid #e0eaf0; border-radius: 10px; }
     .btn-full { width: 100%; padding: 12px; border: none; border-radius: 10px; font-weight: 600; cursor: pointer; }
     .btn-primary-full { background: #0d2137; color: white; }
+    .toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(100px); background: #0d2137; color: white; padding: 12px 22px; border-radius: 10px; z-index: 1000; transition: transform 0.3s; }
+    .toast.show { transform: translateX(-50%) translateY(0); }
 
-    /* Admin Panel */
+    /* Admin Panel Styles */
     .admin-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 500; display: none; overflow-y: auto; padding: 20px; }
     .admin-overlay.open { display: block; }
     .admin-box { background: white; max-width: 1300px; margin: 0 auto; border-radius: 20px; overflow: hidden; }
@@ -122,33 +134,33 @@
     .delete-btn { background: #fee2e2; color: #dc2626; border: none; padding: 4px 10px; border-radius: 6px; cursor: pointer; }
     .save-btn { background: #0d2137; color: white; border: none; padding: 0.5rem 1rem; border-radius: 10px; cursor: pointer; font-weight: 600; }
     .brcm-contact { display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem; border-bottom: 1px solid #eee; }
-    .toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(100px); background: #0d2137; color: white; padding: 12px 22px; border-radius: 10px; z-index: 1000; transition: transform 0.3s; }
-    .toast.show { transform: translateX(-50%) translateY(0); }
     .invoice-card { background: white; border: 1px solid #e0eaf0; border-radius: 12px; padding: 15px; margin-bottom: 15px; }
 
     @media (max-width: 700px) {
+      .top-bar .loc-info { display: none; }
+      nav { padding: 0 3%; height: 60px; }
+      .logo h1 { font-size: 1rem; }
       .nav-links { display: none; }
       .hamburger { display: block; }
-      .hero { grid-template-columns: 1fr; text-align: center; }
+      .nav-right { gap: 5px; }
+      .hero { grid-template-columns: 1fr; text-align: center; padding: 40px 5%; }
       .hero-icon { display: none; }
       .products-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 14px; }
       .cart-sidebar { width: 100%; right: -100%; }
-      .admin-stats .stat-card { min-width: 60px; font-size: 0.7rem; }
-      .a-tab { padding: 4px 10px; font-size: 0.7rem; }
     }
   </style>
 </head>
 <body>
 
-<!-- Top Bar -->
+<!-- TOP BAR - Original -->
 <div class="top-bar">
   <span>💧 RO Specialist · Domestic &amp; Commercial</span>
   <span><span class="pureit-badge"><span class="badge-icon"><i class="fas fa-check"></i></span> Authorised LSP · Pureit</span></span>
   <span><i class="fas fa-phone-alt"></i> +91 90066 86591</span>
-  <span><i class="fas fa-map-marker-alt"></i> Lalan Complex, Siwan, Bihar</span>
+  <span class="loc-info"><i class="fas fa-map-marker-alt"></i> Lalan Complex, Siwan, Bihar</span>
 </div>
 
-<!-- Navigation -->
+<!-- NAV - Original -->
 <nav>
   <div class="logo"><h1>Pandey Enterprises</h1><p>RO Systems &amp; Spare Parts</p></div>
   <div class="nav-links"><a href="#">Home</a><a href="#products">Products</a><a href="#commercial">Commercial</a><a href="#contact">Contact</a></div>
@@ -161,7 +173,7 @@
 </nav>
 <div class="mobile-menu" id="mobileMenu"><a href="#">Home</a><a href="#products">Products</a><a href="#commercial">Commercial</a><a href="#contact">Contact</a></div>
 
-<!-- Hero -->
+<!-- HERO - Original -->
 <section class="hero">
   <div><h2>Pure Water Solutions<br>for <em>Every Need</em></h2><p>Complete range of RO systems, membranes, filters, pumps and spare parts.</p><a href="https://wa.me/919006686591" class="btn-primary" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Us</a></div>
   <div class="hero-icon"><i class="fas fa-water"></i></div>
@@ -171,8 +183,13 @@
 <div class="cat-tabs" id="categoryTabsContainer"></div>
 <div class="products-grid" id="productsGrid"></div>
 
-<div id="commercial" class="commercial"><div><h3>Industrial RO Systems &amp; Bulk Supply</h3><p>Custom capacity systems for hotels, hospitals, factories &amp; more.</p><button class="btn-primary" id="commercialEnqBtn"><i class="fas fa-industry"></i> Get Commercial Quote</button></div><i class="fas fa-industry" style="font-size: 4.5rem; opacity: 0.3;"></i></div>
+<!-- COMMERCIAL - Original -->
+<div id="commercial" class="commercial">
+  <div><h3>Industrial RO Systems &amp; Bulk Supply</h3><p>Custom capacity systems for hotels, hospitals, factories &amp; more.</p><button class="btn-primary" id="commercialEnqBtn"><i class="fas fa-industry"></i> Get Commercial Quote</button></div>
+  <i class="fas fa-industry" style="font-size: 4.5rem; opacity: 0.3;"></i>
+</div>
 
+<!-- FOOTER - Original -->
 <footer id="contact">
   <div class="footer-grid">
     <div><h3>Pandey Enterprises</h3><p>Lalan Complex, Opposite Chair Shop,<br>Siwan, Bihar – 841226</p></div>
@@ -182,35 +199,36 @@
   <div class="footer-bottom">© 2025 Pandey Enterprises · RO Specialist · Siwan, Bihar</div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/919006686591?text=Hello%20Pandey%20Enterprises%2C%20I%20need%20help%20with%20RO%20system" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<!-- WHATSAPP FLOATING BUTTON -->
+<a class="wa-float" href="https://wa.me/919006686591?text=Hello%20Pandey%20Enterprises%2C%20I%20need%20help%20with%20RO%20system" target="_blank"><span class="wa-float-tooltip">Chat on WhatsApp</span><i class="fab fa-whatsapp"></i></a>
 
 <div class="overlay" id="overlay"></div>
 
-<!-- Cart Sidebar -->
+<!-- CART SIDEBAR -->
 <div class="cart-sidebar" id="cartSidebar">
   <div class="cart-header"><h3><i class="fas fa-shopping-cart"></i> Your Cart</h3><button class="cart-close-btn" id="cartCloseBtn">&times;</button></div>
   <div id="cartBody"></div>
   <div class="cart-footer"><div class="cart-total-row"><span>Total</span><span id="cartTotal">₹0</span></div><button class="wa-order-btn" id="waOrderBtn"><i class="fab fa-whatsapp"></i> Send Order on WhatsApp</button></div>
 </div>
 
-<!-- User Modal -->
+<!-- USER MODAL -->
 <div class="modal-overlay" id="userModal"><div class="modal-box"><div class="modal-header"><h3>My Account</h3><button class="modal-close" onclick="closeUserModal()">&times;</button></div><div class="modal-body" id="userModalBody"></div></div></div>
 
-<!-- Bulk Enquiry Modal -->
+<!-- BULK ENQUIRY MODAL -->
 <div class="modal-overlay" id="bulkEnquiryModal"><div class="modal-box"><div class="modal-header"><h3>Commercial Enquiry</h3><button class="modal-close" onclick="closeBulkEnquiryModal()">&times;</button></div><div class="modal-body"><div class="form-group"><input type="text" id="bulkName" placeholder="Your Name"></div><div class="form-group"><input type="tel" id="bulkPhone" placeholder="Phone Number"></div><div class="form-group"><textarea id="bulkMessage" rows="3" placeholder="Your Requirement"></textarea></div><button class="btn-full btn-primary-full" onclick="sendBulkEnquiry()">Send on WhatsApp</button></div></div></div>
 
-<!-- Admin Panel with Full Features -->
-<div class="admin-overlay" id="adminOverlay"><div class="admin-box"><div class="admin-bar"><h2><i class="fas fa-user-shield"></i> Admin Dashboard — Stock & Billing System</h2><div><button id="adminLogoutBtn" style="display:none; background:#dc2626; color:white; border:none; padding:7px 14px; border-radius:8px; cursor:pointer;" onclick="doAdminLogout()">Logout</button><button id="adminCloseBtn" style="background:none; border:none; color:white; font-size:1.1rem; cursor:pointer; margin-left:10px;"><i class="fas fa-times"></i> Close</button></div></div><div class="admin-inner" style="padding:20px;"><div id="adminLoginPanel"><h3 style="text-align:center;">Admin Login</h3><p style="text-align:center;">Username: admin | Password: admin123</p><div class="form-group"><input type="text" id="adminUser" value="admin" placeholder="Username"></div><div class="form-group"><input type="password" id="adminPwd" placeholder="Password"></div><button class="btn-full btn-primary-full" id="adminSubmitBtn">Login</button></div><div id="adminDash" style="display:none;"><div class="admin-stats" id="adminStats"></div><div class="a-tabs-row"><button class="a-tab active" data-panel="products">📦 Products & Stock</button><button class="a-tab" data-panel="orders">📋 Orders</button><button class="a-tab" data-panel="invoices">🧾 Invoices/Billing</button><button class="a-tab" data-panel="customers">👥 Users</button><button class="a-tab" data-panel="enquiries">📩 Enquiries</button><button class="a-tab" data-panel="categories">🏷️ Categories</button><button class="a-tab brcm-tab-special" data-panel="broadcast">📢 WhatsApp Broadcast</button><button class="a-tab" data-panel="settings">⚙️ Settings</button></div><div id="panelProducts" class="tab-panel active"><div class="add-form"><h4>➕ Add New Product</h4><div class="add-form-row"><input type="text" id="newProductName" placeholder="Product Name"><input type="text" id="newProductCategory" placeholder="Category (domestic/spares/commercial)"></div><div class="add-form-row"><input type="number" id="newProductPrice" placeholder="Price (₹)"><input type="number" id="newProductOldPrice" placeholder="Old Price"></div><div class="add-form-row"><input type="number" id="newProductDiscount" placeholder="Discount %"><input type="number" id="newProductStock" placeholder="Stock Quantity" value="10"></div><input type="text" id="newProductDesc" placeholder="Description"><input type="text" id="newProductIcon" placeholder="Icon class" value="fas fa-cog"><button class="btn-add-item" onclick="addProduct()">Add Product</button></div><div class="table-responsive"><table class="admin-table"><thead><tr><th>Product</th><th>Price</th><th>Discount</th><th>Stock</th><th>Status</th><th>Action</th> </thead><tbody id="adminProductsList"></tbody> </table></div><button class="save-btn" onclick="saveAllProducts()">💾 Save All Changes</button></div><div id="panelOrders" class="tab-panel"><table class="admin-table"><thead> <tr><th>#</th><th>Customer</th><th>Phone</th><th>Items</th><th>Total</th><th>Status</th><th>Invoice</th><th>Action</th></tr></thead><tbody id="ordersTableBody"></tbody></table></div><div id="panelInvoices" class="tab-panel"><div id="invoiceList"></div><button class="btn-add-item" onclick="generateManualBill()" style="margin-top:15px;">+ Create Manual Bill</button></div><div id="panelCustomers" class="tab-panel"><table class="admin-table"><thead><tr><th>Name</th><th>Phone</th><th>Address</th><th>Orders</th><th>WhatsApp</th></tr></thead><tbody id="customersTableBody"></tbody></table></div><div id="panelEnquiries" class="tab-panel"><div id="enquiriesList"></div></div><div id="panelCategories" class="tab-panel"><div class="add-form"><h4>Add New Category</h4><input type="text" id="newCategoryName" placeholder="Category Name"><input type="text" id="newCategoryKey" placeholder="Category Key (e.g., uv-filters)"><button id="saveCategoryBtn" class="btn-add-item">Add Category</button></div><div id="categoriesListAdmin"></div></div><div id="panelBroadcast" class="tab-panel"><div style="background:#f0fff4; border-radius:16px; padding:1.2rem; margin-bottom:1rem;"><h4>📢 WhatsApp Broadcast</h4><select id="brcmTemplate" onchange="applyTemplate()" style="width:100%; padding:0.5rem; margin:10px 0;"><option value="">-- Template --</option><option value="promo">🎉 New Offer</option><option value="stock">📦 New Stock</option><option value="festive">🎊 Festival Greetings</option></select><textarea id="brcmMessage" rows="4" placeholder="Your broadcast message..." style="width:100%; padding:0.8rem; border-radius:10px; margin:10px 0;"></textarea><div id="brcmUserList" style="max-height:200px; overflow-y:auto; border:1px solid #ddd; border-radius:10px; margin:10px 0;"></div><button onclick="sendBroadcast()" style="width:100%; background:#25D366; color:white; border:none; padding:12px; border-radius:40px; font-weight:700;"><i class="fab fa-whatsapp"></i> Send Broadcast</button></div><div style="background:#fff8e7; border-radius:16px; padding:1.2rem;"><h4>📞 Send to Custom Number</h4><input type="tel" id="customPhone" placeholder="Mobile Number" style="width:100%; padding:0.8rem; margin:10px 0; border-radius:10px;"><button onclick="sendCustomMessage()" style="width:100%; background:#e8841a; color:white; border:none; padding:12px; border-radius:40px;">Send Message</button></div></div><div id="panelSettings" class="tab-panel"><div class="form-group"><label>WhatsApp Number</label><input type="text" id="whatsappNo" value="919006686591"></div><div class="form-group"><label>Free Delivery Above (₹)</label><input type="number" id="freeMin" value="999"></div><div class="form-group"><label>Default Courier Charge (₹)</label><input type="number" id="defaultCourier" value="49"></div><button class="save-btn" onclick="saveSettings()">Save Settings</button><hr style="margin:20px 0"><h4>Change Admin Password</h4><div class="form-group"><input type="password" id="oldPass" placeholder="Current Password"></div><div class="form-group"><input type="password" id="newPass" placeholder="New Password"></div><div class="form-group"><input type="password" id="confirmPass" placeholder="Confirm Password"></div><button class="save-btn" onclick="changeAdminPassword()">Update Password</button><hr style="margin:20px 0"><button onclick="clearAllData()" style="width:100%; background:#dc2626; color:white; border:none; padding:12px; border-radius:10px; font-weight:600;">🗑️ Clear Orders/Users/Enquiries</button></div></div></div></div></div>
+<!-- ADMIN PANEL - Full Features -->
+<div class="admin-overlay" id="adminOverlay"><div class="admin-box"><div class="admin-bar"><h2><i class="fas fa-user-shield"></i> Admin Dashboard — Stock & Billing System</h2><div><button id="adminLogoutBtn" style="display:none; background:#dc2626; color:white; border:none; padding:7px 14px; border-radius:8px;" onclick="doAdminLogout()">Logout</button><button id="adminCloseBtn" style="background:none; border:none; color:white; font-size:1.1rem; margin-left:10px;"><i class="fas fa-times"></i> Close</button></div></div><div class="admin-inner" style="padding:20px;"><div id="adminLoginPanel"><h3 style="text-align:center;">Admin Login</h3><p style="text-align:center;">Username: admin | Password: admin123</p><div class="form-group"><input type="text" id="adminUser" value="admin"></div><div class="form-group"><input type="password" id="adminPwd"></div><button class="btn-full btn-primary-full" id="adminSubmitBtn">Login</button></div><div id="adminDash" style="display:none;"><div class="admin-stats" id="adminStats"></div><div class="a-tabs-row"><button class="a-tab active" data-panel="products">📦 Products & Stock</button><button class="a-tab" data-panel="orders">📋 Orders</button><button class="a-tab" data-panel="invoices">🧾 Billing/Invoices</button><button class="a-tab" data-panel="customers">👥 Users</button><button class="a-tab" data-panel="enquiries">📩 Enquiries</button><button class="a-tab" data-panel="categories">🏷️ Categories</button><button class="a-tab brcm-tab-special" data-panel="broadcast">📢 WhatsApp Broadcast</button><button class="a-tab" data-panel="settings">⚙️ Settings</button></div><div id="panelProducts" class="tab-panel active"><div class="add-form"><h4>➕ Add New Product</h4><div class="add-form-row"><input type="text" id="newProductName" placeholder="Product Name"><input type="text" id="newProductCategory" placeholder="Category"></div><div class="add-form-row"><input type="number" id="newProductPrice" placeholder="Price (₹)"><input type="number" id="newProductOldPrice" placeholder="Old Price"></div><div class="add-form-row"><input type="number" id="newProductDiscount" placeholder="Discount %"><input type="number" id="newProductStock" placeholder="Stock Quantity" value="10"></div><input type="text" id="newProductDesc" placeholder="Description"><input type="text" id="newProductIcon" placeholder="Icon class" value="fas fa-cog"><button class="btn-add-item" onclick="addProduct()">Add Product</button></div><div class="table-responsive"><table class="admin-table"><thead><tr><th>Product</th><th>Price</th><th>Discount</th><th>Stock</th><th>Status</th><th>Action</th> </thead><tbody id="adminProductsList"></tbody> </table></div><button class="save-btn" onclick="saveAllProducts()">💾 Save All Changes</button></div><div id="panelOrders" class="tab-panel"><table class="admin-table"><thead> <tr><th>#</th><th>Customer</th><th>Phone</th><th>Items</th><th>Total</th><th>Status</th><th>Invoice</th><th>Action</th></tr></thead><tbody id="ordersTableBody"></tbody></table></div><div id="panelInvoices" class="tab-panel"><div id="invoiceList"></div><button class="btn-add-item" onclick="generateManualBill()" style="margin-top:15px;">+ Create Manual Bill</button></div><div id="panelCustomers" class="tab-panel"><table class="admin-table"><thead><tr><th>Name</th><th>Phone</th><th>Address</th><th>Orders</th><th>WhatsApp</th></tr></thead><tbody id="customersTableBody"></tbody></table></div><div id="panelEnquiries" class="tab-panel"><div id="enquiriesList"></div></div><div id="panelCategories" class="tab-panel"><div class="add-form"><h4>Add New Category</h4><input type="text" id="newCategoryName" placeholder="Category Name"><input type="text" id="newCategoryKey" placeholder="Category Key"><button id="saveCategoryBtn" class="btn-add-item">Add Category</button></div><div id="categoriesListAdmin"></div></div><div id="panelBroadcast" class="tab-panel"><div style="background:#f0fff4; padding:1.2rem; border-radius:16px;"><h4>📢 WhatsApp Broadcast</h4><select id="brcmTemplate" onchange="applyTemplate()" style="width:100%; padding:0.5rem; margin:10px 0;"><option value="">-- Template --</option><option value="promo">🎉 New Offer</option><option value="stock">📦 New Stock</option><option value="festive">🎊 Festival</option></select><textarea id="brcmMessage" rows="4" placeholder="Your broadcast message..." style="width:100%; padding:0.8rem; border-radius:10px;"></textarea><div id="brcmUserList" style="max-height:200px; overflow-y:auto; border:1px solid #ddd; margin:10px 0;"></div><button onclick="sendBroadcast()" style="width:100%; background:#25D366; color:white; border:none; padding:12px; border-radius:40px;">📢 Send Broadcast</button></div><div style="background:#fff8e7; padding:1.2rem; border-radius:16px; margin-top:1rem;"><h4>📞 Custom Number</h4><input type="tel" id="customPhone" placeholder="Mobile Number" style="width:100%; padding:0.8rem;"><button onclick="sendCustomMessage()" style="width:100%; background:#e8841a; color:white; border:none; padding:12px; margin-top:10px; border-radius:40px;">Send Message</button></div></div><div id="panelSettings" class="tab-panel"><div class="form-group"><label>WhatsApp Number</label><input type="text" id="whatsappNo" value="919006686591"></div><div class="form-group"><label>Free Delivery Above (₹)</label><input type="number" id="freeMin" value="999"></div><div class="form-group"><label>Default Courier (₹)</label><input type="number" id="defaultCourier" value="49"></div><button class="save-btn" onclick="saveSettings()">Save Settings</button><hr><h4>Change Password</h4><div class="form-group"><input type="password" id="oldPass" placeholder="Current"></div><div class="form-group"><input type="password" id="newPass" placeholder="New"></div><div class="form-group"><input type="password" id="confirmPass" placeholder="Confirm"></div><button class="save-btn" onclick="changeAdminPassword()">Update Password</button><hr><button onclick="clearAllData()" style="width:100%; background:#dc2626; color:white; border:none; padding:12px; border-radius:10px;">🗑️ Clear Orders/Users/Enquiries</button></div></div></div></div></div>
 
 <div class="toast" id="toast"></div>
 
 <script>
 // Data Storage
 let products = JSON.parse(localStorage.getItem('pe_products') || JSON.stringify([
-  { id:1, name:"Domestic RO System", desc:"8L storage, UV+UF purification", price:8999, oldPrice:12999, discount:31, stock:12, category:"domestic", icon:"fas fa-home", inStock:true, highlights:["7-stage","UV+UF"] },
-  { id:2, name:"RO Membrane 75 GPD", desc:"High rejection TFC", price:1299, oldPrice:1899, discount:32, stock:25, category:"spares", icon:"fas fa-circle", inStock:true, highlights:["75 GPD","Long life"] },
-  { id:3, name:"Sediment Filter", desc:"5 micron, 10 inch", price:180, oldPrice:350, discount:49, stock:40, category:"spares", icon:"fas fa-filter", inStock:true, highlights:["5 micron"] },
-  { id:4, name:"Commercial RO 250 LPH", desc:"SS frame, auto flush", price:48500, oldPrice:59000, discount:18, stock:5, category:"commercial", icon:"fas fa-building", inStock:true, highlights:["250 LPH","Auto flush"] }
+  { id:1, name:"Domestic RO System", desc:"8L storage, UV+UF purification, 7-stage", price:8999, oldPrice:12999, discount:31, stock:12, category:"domestic", icon:"fas fa-home", inStock:true, courierCharge:0, highlights:["7-stage","UV+UF"] },
+  { id:2, name:"RO Membrane 75 GPD", desc:"High rejection TFC membrane", price:1299, oldPrice:1899, discount:32, stock:25, category:"spares", icon:"fas fa-circle", inStock:true, courierCharge:49, highlights:["75 GPD"] },
+  { id:3, name:"Sediment Filter 5 Micron", desc:"10 inch, removes dirt", price:180, oldPrice:350, discount:49, stock:40, category:"spares", icon:"fas fa-filter", inStock:true, courierCharge:39, highlights:["5 micron"] },
+  { id:4, name:"Commercial RO 250 LPH", desc:"SS frame, industrial grade", price:48500, oldPrice:59000, discount:18, stock:5, category:"commercial", icon:"fas fa-building", inStock:true, courierCharge:0, highlights:["250 LPH"] }
 ]));
 let orders = JSON.parse(localStorage.getItem('pe_orders') || '[]');
 let invoices = JSON.parse(localStorage.getItem('pe_invoices') || '[]');
@@ -236,12 +254,6 @@ function fmtPrice(p) { return '₹' + Number(p).toLocaleString('en-IN'); }
 function showToast(msg) { let t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),2500); }
 
 function updateStats() {
-  if(document.getElementById('statProducts')) document.getElementById('statProducts').innerText = products.length;
-  if(document.getElementById('statOrders')) document.getElementById('statOrders').innerText = orders.length;
-  if(document.getElementById('statUsers')) document.getElementById('statUsers').innerText = customers.length;
-  if(document.getElementById('statEnquiries')) document.getElementById('statEnquiries').innerText = bulkEnquiries.length;
-  let totalSales = orders.reduce((s,o)=>s+(parseInt(o.total)||0),0);
-  if(document.getElementById('statTotalSales')) document.getElementById('statTotalSales').innerText = fmtPrice(totalSales);
   if(document.getElementById('adminStats')) {
     let totalStock = products.reduce((s,p)=>s+(p.stock||0),0);
     document.getElementById('adminStats').innerHTML = `<div class="stat-card"><div class="stat-number">${products.length}</div><div>Products</div></div><div class="stat-card"><div class="stat-number">${totalStock}</div><div>Total Stock</div></div><div class="stat-card"><div class="stat-number">${orders.length}</div><div>Orders</div></div><div class="stat-card"><div class="stat-number">${invoices.length}</div><div>Invoices</div></div><div class="stat-card"><div class="stat-number">${customers.length}</div><div>Customers</div></div>`;
@@ -262,7 +274,7 @@ function renderProducts() {
   let discPrice = p => p.discount ? Math.round(p.price - p.price*p.discount/100) : p.price;
   grid.innerHTML = filtered.map(p => {
     let stockStatus = p.stock <= 0 ? '<span class="stock-badge out">Out of Stock</span>' : (p.stock <= 5 ? `<span class="stock-badge low">Only ${p.stock} left</span>` : `<span class="stock-badge">In Stock</span>`);
-    return `<div class="product-card">${p.discount ? `<div class="product-badge">${p.discount}% OFF</div>` : ''}${stockStatus}<div class="product-img"><i class="${p.icon}"></i></div><div class="product-body"><div class="product-name">${p.name}</div><div class="product-desc">${p.desc}</div><div class="price-row"><span class="price-new">${fmtPrice(discPrice(p))}</span>${p.oldPrice ? `<span class="price-old">${fmtPrice(p.oldPrice)}</span>` : ''}</div><button class="btn-add-cart" data-id="${p.id}" ${p.stock<=0 ? 'disabled' : ''}><i class="fas fa-cart-plus"></i> Add to Cart</button></div></div>`;
+    return `<div class="product-card">${p.discount ? `<div class="product-badge">${p.discount}% OFF</div>` : ''}${stockStatus}<div class="product-img"><i class="${p.icon}"></i></div><div class="product-body"><div class="product-name">${p.name}</div><div class="product-desc">${p.desc}</div><div class="price-row"><span class="price-new">${fmtPrice(discPrice(p))}</span>${p.oldPrice ? `<span class="price-old">${fmtPrice(p.oldPrice)}</span>` : ''}</div><div class="courier-note">${p.courierCharge===0?'✅ Free Delivery':`+${fmtPrice(p.courierCharge)} delivery`}</div><button class="btn-add-cart" data-id="${p.id}" ${p.stock<=0 ? 'disabled' : ''}><i class="fas fa-cart-plus"></i> Add to Cart</button></div></div>`;
   }).join('');
   document.querySelectorAll('.btn-add-cart').forEach(btn => btn.addEventListener('click', () => addToCart(parseInt(btn.dataset.id))));
 }
@@ -273,8 +285,8 @@ function addToCart(id) {
   let price = p.discount ? Math.round(p.price - p.price*p.discount/100) : p.price;
   let existing = cart.find(x => x.id === id);
   if(existing) existing.qty++;
-  else cart.push({ id:p.id, name:p.name, price:price, qty:1, courierCharge:0 });
-  updateCartUI();
+  else cart.push({ id:p.id, name:p.name, price:price, qty:1, courierCharge:p.courierCharge||0 });
+  updateCartUI(); showToast(`✅ ${p.name} added`);
 }
 
 function changeQty(id, delta) {
@@ -293,13 +305,13 @@ function updateCartUI() {
   let totalQty = cart.reduce((s,i)=>s+i.qty,0);
   document.getElementById('cartCount').innerText = totalQty;
   let subtotal = cart.reduce((s,i)=>s+i.price*i.qty,0);
-  let courier = subtotal >= settings.freeMin ? 0 : settings.defaultCourier;
+  let maxCourier = Math.max(...cart.map(i=>i.courierCharge||0),0);
+  let courier = subtotal >= settings.freeMin ? 0 : maxCourier;
   let total = subtotal + courier;
   let body = document.getElementById('cartBody');
-  if(cart.length === 0) body.innerHTML = '<div style="text-align:center; padding:40px;">Cart empty</div>';
+  if(cart.length === 0) body.innerHTML = '<div class="empty-state">Cart empty</div>';
   else body.innerHTML = cart.map(item => `<div class="cart-item"><div><strong>${item.name}</strong><br>${fmtPrice(item.price)} x ${item.qty}</div><div class="cart-qty-controls"><button onclick="changeQty(${item.id},-1)">-</button><span>${item.qty}</span><button onclick="changeQty(${item.id},1)">+</button></div></div>`).join('');
   document.getElementById('cartTotal').innerText = fmtPrice(total);
-  window.cartData = { subtotal, courier, total };
 }
 
 function sendWhatsAppOrder() {
@@ -308,7 +320,8 @@ function sendWhatsAppOrder() {
   let phone = currentUser?.phone || prompt('WhatsApp number:');
   if(!name || !phone) return;
   let subtotal = cart.reduce((s,i)=>s+i.price*i.qty,0);
-  let courier = subtotal >= settings.freeMin ? 0 : settings.defaultCourier;
+  let maxCourier = Math.max(...cart.map(i=>i.courierCharge||0),0);
+  let courier = subtotal >= settings.freeMin ? 0 : maxCourier;
   let total = subtotal + courier;
   let msg = `*New Order - Pandey Enterprises*\nCustomer: ${name}\nPhone: ${phone}\n\nItems:\n`;
   cart.forEach(i => msg += `• ${i.name} x ${i.qty} = ${fmtPrice(i.price*i.qty)}\n`);
@@ -324,7 +337,7 @@ function sendWhatsAppOrder() {
   saveCustomers();
   window.open(`https://wa.me/${settings.whatsappNo}?text=${encodeURIComponent(msg)}`,'_blank');
   cart = []; updateCartUI(); closeCart();
-  showToast('Order placed! Stock updated.');
+  showToast('Order placed!');
 }
 
 function openCart() { document.getElementById('cartSidebar').classList.add('open'); document.getElementById('overlay').classList.add('open'); }
@@ -333,13 +346,20 @@ function closeCart() { document.getElementById('cartSidebar').classList.remove('
 // Admin Functions
 function loadAdminProducts() {
   let tbody = document.getElementById('adminProductsList');
-  tbody.innerHTML = products.map(p => `<tr><td><input class="admin-input" id="name_${p.id}" value="${p.name}"><input class="admin-input" id="desc_${p.id}" value="${p.desc}"></td><td><input class="admin-input" type="number" id="price_${p.id}" value="${p.price}"></td><td><input class="admin-input" type="number" id="discount_${p.id}" value="${p.discount||0}"></td><td><input class="admin-input" type="number" id="stock_${p.id}" value="${p.stock||0}" style="width:70px"></td><td><div class="stock-switch ${p.inStock!==false?'active':''}" onclick="toggleStock(${p.id})"></div></td><td><button class="delete-btn" onclick="deleteProduct(${p.id})">Delete</button></td></tr>`).join('');
+  tbody.innerHTML = products.map(p => `叭
+    <td><input class="admin-input" id="name_${p.id}" value="${p.name}"><input class="admin-input" id="desc_${p.id}" value="${p.desc}"></td>
+    <td><input class="admin-input" type="number" id="price_${p.id}" value="${p.price}"></td>
+    <td><input class="admin-input" type="number" id="discount_${p.id}" value="${p.discount||0}"></td>
+    <td><input class="admin-input" type="number" id="stock_${p.id}" value="${p.stock||0}" style="width:70px"></td>
+    <td><div class="stock-switch ${p.inStock!==false?'active':''}" onclick="toggleStock(${p.id})"></div></td>
+    <td><button class="delete-btn" onclick="deleteProduct(${p.id})">Delete</button></td>
+  `).join('');
 }
 function toggleStock(id){ let p=products.find(x=>x.id===id); if(p){ p.inStock=!p.inStock; if(!p.inStock) p.stock=0; saveProducts(); loadAdminProducts(); renderProducts(); } }
 function deleteProduct(id){ if(confirm('Delete?')){ products=products.filter(x=>x.id!==id); saveProducts(); loadAdminProducts(); renderProducts(); showToast('Deleted'); } }
 function addProduct(){
   let newId = products.length?Math.max(...products.map(p=>p.id))+1:1;
-  products.push({ id:newId, name:document.getElementById('newProductName').value||'New', desc:document.getElementById('newProductDesc').value||'', price:parseInt(document.getElementById('newProductPrice').value)||0, oldPrice:parseInt(document.getElementById('newProductOldPrice').value)||0, discount:parseInt(document.getElementById('newProductDiscount').value)||0, stock:parseInt(document.getElementById('newProductStock').value)||0, category:document.getElementById('newProductCategory').value||'spares', icon:document.getElementById('newProductIcon').value||'fas fa-cog', inStock:true, highlights:[] });
+  products.push({ id:newId, name:document.getElementById('newProductName').value||'New', desc:document.getElementById('newProductDesc').value||'', price:parseInt(document.getElementById('newProductPrice').value)||0, oldPrice:parseInt(document.getElementById('newProductOldPrice').value)||0, discount:parseInt(document.getElementById('newProductDiscount').value)||0, stock:parseInt(document.getElementById('newProductStock').value)||0, category:document.getElementById('newProductCategory').value||'spares', icon:document.getElementById('newProductIcon').value||'fas fa-cog', inStock:true, courierCharge:0, highlights:[] });
   saveProducts(); loadAdminProducts(); renderProducts(); showToast('Product added');
 }
 function saveAllProducts(){
@@ -364,137 +384,33 @@ function loadAdminOrders(){
 }
 function updateOrderStatus(id,status){ let o=orders.find(x=>x.id===id); if(o){ o.status=status; saveOrders(); showToast('Status updated'); } }
 function deleteOrder(id){ if(confirm('Delete?')){ orders=orders.filter(x=>x.id!==id); saveOrders(); loadAdminOrders(); showToast('Deleted'); } }
-function viewInvoice(orderId){
-  let inv = invoices.find(i=>i.orderId===orderId);
-  if(!inv) { showToast('Invoice not found'); return; }
-  alert(`INVOICE #${inv.id}\nCustomer: ${inv.customer}\nDate: ${inv.date}\nItems: ${inv.items.map(i=>`${i.name} x${i.qty} = ${fmtPrice(i.price*i.qty)}`).join('\n')}\nTotal: ${fmtPrice(inv.total)}`);
-}
-function loadInvoices(){
-  let container = document.getElementById('invoiceList');
-  container.innerHTML = invoices.map(inv=>`<div class="invoice-card"><div><strong>Invoice #${inv.id}</strong> - ${inv.date}</div><div>${inv.customer} | ${inv.phone}</div><div>${inv.items.map(i=>`${i.name} x${i.qty}`).join(', ')}</div><div><strong>Total: ${fmtPrice(inv.total)}</strong></div><button onclick="printInvoice(${inv.id})" style="margin-top:8px;padding:4px 12px;background:#0e7e8c;color:white;border:none;border-radius:6px;">Print</button></div>`).join('');
-}
-function printInvoice(id){
-  let inv = invoices.find(i=>i.id===id);
-  if(!inv) return;
-  let win = window.open('','_blank');
-  win.document.write(`<html><head><title>Invoice #${inv.id}</title><style>body{font-family:sans-serif;padding:20px}</style></head><body><h2>Pandey Enterprises</h2><p>Lalan Complex, Siwan, Bihar | +91 90066 86591</p><hr><h3>Invoice #${inv.id}</h3><p>Customer: ${inv.customer}<br>Phone: ${inv.phone}<br>Date: ${inv.date}</p><table border="1" cellpadding="8"><tr><th>Item</th><th>Qty</th><th>Price</th><th>Total</th></tr>${inv.items.map(i=>`<tr><td>${i.name}</td><td>${i.qty}</td><td>${fmtPrice(i.price)}</td><td>${fmtPrice(i.price*i.qty)}</td></tr>`).join('')}<tr><td colspan="3"><b>Total</b></td><td><b>${fmtPrice(inv.total)}</b></td></tr></table><p>Thank you for your purchase!</p></body></html>`);
-  win.print();
-}
-function generateManualBill(){
-  let name = prompt('Customer Name:');
-  let phone = prompt('Phone Number:');
-  if(!name||!phone) return;
-  let itemsInput = prompt('Items (format: Product Name x Qty, Price - separate with comma)\nExample: RO Membrane x2, 1299');
-  if(!itemsInput) return;
-  let items = []; let subtotal=0;
-  itemsInput.split(',').forEach(part=>{
-    let match = part.match(/(.+?)x(\d+)\s*,\s*(\d+)/);
-    if(match){
-      let qty=parseInt(match[2]), price=parseInt(match[3]);
-      items.push({name:match[1].trim(), qty, price});
-      subtotal += price*qty;
-    }
-  });
-  if(items.length===0){ showToast('Invalid format'); return; }
-  let courier = subtotal>=settings.freeMin?0:settings.defaultCourier;
-  let total = subtotal+courier;
-  let invoice = { id:Date.now(), orderId:Date.now(), customer:name, phone, items, subtotal, courier, total, date:new Date().toLocaleString() };
-  invoices.unshift(invoice); saveInvoices();
-  let order = { id:invoice.orderId, name, phone, items:items.map(i=>`${i.name} x${i.qty}`).join(', '), total, date:invoice.date, status:'Confirmed' };
-  orders.unshift(order); saveOrders();
-  showToast('Manual bill created'); loadInvoices(); loadAdminOrders();
-}
-function loadAdminCustomers(){
-  let tbody = document.getElementById('customersTableBody');
-  tbody.innerHTML = customers.map(c=>`<tr><td>${c.name}</td><td>${c.phone}</td><td>${c.address||'-'}</td><td>${c.orders||0}</td><td><a href="https://wa.me/${c.phone.replace(/\D/g,'')}" target="_blank" style="color:#25D366;"><i class="fab fa-whatsapp"></i> Chat</a></td></tr>`).join('');
-}
-function loadEnquiriesList(){
-  let el = document.getElementById('enquiriesList');
-  el.innerHTML = bulkEnquiries.map(e=>`<div class="invoice-card"><strong>${e.name}</strong> (${e.phone})<br>${e.message}<br><small>${e.date}</small><a href="https://wa.me/${e.phone.replace(/\D/g,'')}" target="_blank" style="margin-left:10px;color:#25D366;">Chat</a></div>`).join('')||'<p>No enquiries</p>';
-}
-function loadCategoriesListAdmin(){
-  let el = document.getElementById('categoriesListAdmin');
-  el.innerHTML = customCategories.map((c,i)=>`<div style="display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px solid #eee;"><span>${c.name} (${c.key})</span><button class="delete-btn" onclick="deleteCategory(${i})">Delete</button></div>`).join('');
-}
+function viewInvoice(orderId){ let inv=invoices.find(i=>i.orderId===orderId); if(inv) alert(`Invoice #${inv.id}\n${inv.customer}\nTotal: ${fmtPrice(inv.total)}`); else showToast('No invoice'); }
+function loadInvoices(){ document.getElementById('invoiceList').innerHTML = invoices.map(inv=>`<div class="invoice-card"><strong>#${inv.id}</strong> ${inv.customer} | ${fmtPrice(inv.total)}<br><small>${inv.date}</small><button onclick="printInvoice(${inv.id})" style="margin-left:10px;">Print</button></div>`).join(''); }
+function printInvoice(id){ let inv=invoices.find(i=>i.id===id); if(inv){ let win=window.open('','_blank'); win.document.write(`<html><head><title>Invoice</title><style>body{font-family:sans-serif;padding:20px}</style></head><body><h2>Pandey Enterprises</h2><p>Lalan Complex, Siwan, Bihar<br>+91 90066 86591</p><hr><h3>Invoice #${inv.id}</h3><p>Customer: ${inv.customer}<br>Phone: ${inv.phone}<br>Date: ${inv.date}</p><table border="1"><tr><th>Item</th><th>Qty</th><th>Price</th><th>Total</th></tr>${inv.items.map(i=>`<tr><td>${i.name}</td><td>${i.qty}</td><td>${fmtPrice(i.price)}</td><td>${fmtPrice(i.price*i.qty)}</td></tr>`).join('')}<tr><td colspan="3"><b>Total</b></td><td><b>${fmtPrice(inv.total)}</b></td></tr></table><p>Thank you!</p></body></html>`); win.print(); } }
+function generateManualBill(){ let name=prompt('Customer Name:'), phone=prompt('Phone:'); if(!name||!phone) return; let itemsInput=prompt('Items (format: Name x Qty, Price)\nExample: RO Membrane x2, 1299'); if(!itemsInput) return; let items=[]; let subtotal=0; itemsInput.split(',').forEach(part=>{ let match=part.match(/(.+?)x(\d+)\s*,\s*(\d+)/); if(match){ let qty=parseInt(match[2]), price=parseInt(match[3]); items.push({name:match[1].trim(), qty, price}); subtotal+=price*qty; } }); if(items.length===0){ showToast('Invalid format'); return; } let courier=subtotal>=settings.freeMin?0:settings.defaultCourier; let total=subtotal+courier; let invoice={id:Date.now(), orderId:Date.now(), customer:name, phone, items, subtotal, courier, total, date:new Date().toLocaleString()}; invoices.unshift(invoice); saveInvoices(); let order={id:invoice.orderId, name, phone, items:items.map(i=>`${i.name} x${i.qty}`).join(', '), total, date:invoice.date, status:'Confirmed'}; orders.unshift(order); saveOrders(); showToast('Manual bill created'); loadInvoices(); loadAdminOrders(); }
+function loadAdminCustomers(){ document.getElementById('customersTableBody').innerHTML = customers.map(c=>`<tr><td>${c.name}</td><td>${c.phone}</td><td>${c.address||'-'}</td><td>${c.orders||0}</td><td><a href="https://wa.me/${c.phone.replace(/\D/g,'')}" target="_blank">Chat</a></td></tr>`).join(''); }
+function loadEnquiriesList(){ document.getElementById('enquiriesList').innerHTML = bulkEnquiries.map(e=>`<div class="invoice-card"><strong>${e.name}</strong> (${e.phone})<br>${e.message}<br><small>${e.date}</small></div>`).join('')||'<p>No enquiries</p>'; }
+function loadCategoriesListAdmin(){ document.getElementById('categoriesListAdmin').innerHTML = customCategories.map((c,i)=>`<div style="display:flex; justify-content:space-between; padding:8px 0;"><span>${c.name} (${c.key})</span><button class="delete-btn" onclick="deleteCategory(${i})">Delete</button></div>`).join(''); }
 function deleteCategory(i){ customCategories.splice(i,1); localStorage.setItem('pe_categories',JSON.stringify(customCategories)); renderCategoryTabs(); loadCategoriesListAdmin(); showToast('Category deleted'); }
-document.getElementById('saveCategoryBtn').onclick = () => {
-  let name=document.getElementById('newCategoryName').value.trim(), key=document.getElementById('newCategoryKey').value.trim().replace(/\s+/g,'-').toLowerCase();
-  if(name&&key&&!customCategories.find(c=>c.key===key)){ customCategories.push({name,key}); localStorage.setItem('pe_categories',JSON.stringify(customCategories)); renderCategoryTabs(); loadCategoriesListAdmin(); showToast('Category added'); }
-};
-function loadBroadcastUsers(){
-  let users = [...customers];
-  let html = users.map((u,i)=>`<div class="brcm-contact"><input type="checkbox" id="brcm_${i}" value="${u.phone}" checked><label for="brcm_${i}">${u.name} - ${u.phone}</label></div>`).join('');
-  document.getElementById('brcmUserList').innerHTML = html || '<p>No users yet</p>';
-}
-function applyTemplate(){
-  let t = document.getElementById('brcmTemplate').value;
-  let wa = settings.whatsappNo;
-  let msg = "";
-  if(t==="promo") msg = `🎉 *Pandey Enterprises - Special Offer!*\n\nNamaste! Aaj khaas offer hai 💧\n✅ Discount on RO systems\n✅ Free installation on orders above ₹5000\n\nOrder: https://wa.me/${wa}\n- Team Pandey Enterprises`;
-  else if(t==="stock") msg = `📦 *New Stock Arrived!*\n\nFresh stock aa gaya hai:\n💧 Domestic RO Systems\n🔬 TFC Membranes\n🔧 Spare Parts\n\nOrder: https://wa.me/${wa}`;
-  else if(t==="festive") msg = `🎊 *Pandey Enterprises ki taraf se Shubhkamnayein!*\n\nFestival Offers: Flat discount on RO systems\nOrder: https://wa.me/${wa}`;
-  document.getElementById('brcmMessage').value = msg;
-}
-function sendBroadcast(){
-  let msg = document.getElementById('brcmMessage').value.trim();
-  if(!msg){ showToast('Enter message'); return; }
-  let selected = [...document.querySelectorAll('#brcmUserList input:checked')].map(cb=>cb.value);
-  if(selected.length===0){ showToast('Select users'); return; }
-  if(!confirm(`Send to ${selected.length} users?`)) return;
-  selected.forEach((phone,idx)=>{ let clean=phone.replace(/\D/g,''); if(clean.length===10) clean='91'+clean; setTimeout(()=>window.open(`https://wa.me/${clean}?text=${encodeURIComponent(msg)}`,'_blank'), idx*1000); });
-  showToast(`Broadcast to ${selected.length} users`);
-}
-function sendCustomMessage(){
-  let phone = document.getElementById('customPhone').value.replace(/\D/g,'');
-  let msg = document.getElementById('brcmMessage').value.trim();
-  if(!phone || !msg){ showToast('Enter phone and message'); return; }
-  if(phone.length===10) phone='91'+phone;
-  window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`,'_blank');
-}
-function saveSettings(){
-  settings.whatsappNo = document.getElementById('whatsappNo').value;
-  settings.freeMin = parseInt(document.getElementById('freeMin').value)||999;
-  settings.defaultCourier = parseInt(document.getElementById('defaultCourier').value)||49;
-  saveSettingsData(); showToast('Settings saved');
-}
-function changeAdminPassword(){
-  let old = document.getElementById('oldPass').value;
-  let newp = document.getElementById('newPass').value;
-  let conf = document.getElementById('confirmPass').value;
-  if(old !== settings.adminPassword){ showToast('Current password wrong'); return; }
-  if(newp !== conf){ showToast('Passwords do not match'); return; }
-  if(newp.length < 4){ showToast('Password must be at least 4 characters'); return; }
-  settings.adminPassword = newp;
-  saveSettingsData(); showToast('Password changed');
-}
-function clearAllData(){
-  if(!confirm('⚠️ Clear all orders, users, enquiries? Products will remain.')) return;
-  orders = []; customers = []; bulkEnquiries = []; invoices = [];
-  localStorage.removeItem('pe_orders'); localStorage.removeItem('pe_customers'); localStorage.removeItem('pe_bulk'); localStorage.removeItem('pe_invoices');
-  saveOrders(); saveCustomers(); saveBulk(); saveInvoices();
-  loadAdminOrders(); loadAdminCustomers(); loadEnquiriesList(); loadInvoices();
-  showToast('Data cleared');
-}
+document.getElementById('saveCategoryBtn').onclick=()=>{ let name=document.getElementById('newCategoryName').value.trim(), key=document.getElementById('newCategoryKey').value.trim().replace(/\s+/g,'-').toLowerCase(); if(name&&key&&!customCategories.find(c=>c.key===key)){ customCategories.push({name,key}); localStorage.setItem('pe_categories',JSON.stringify(customCategories)); renderCategoryTabs(); loadCategoriesListAdmin(); showToast('Category added'); } };
+function loadBroadcastUsers(){ let users=[...customers]; document.getElementById('brcmUserList').innerHTML = users.map((u,i)=>`<div class="brcm-contact"><input type="checkbox" id="brcm_${i}" value="${u.phone}" checked><label for="brcm_${i}">${u.name} - ${u.phone}</label></div>`).join('')||'<p>No users</p>'; }
+function applyTemplate(){ let t=document.getElementById('brcmTemplate').value; let wa=settings.whatsappNo; let msg=""; if(t==="promo") msg=`🎉 Pandey Enterprises Special Offer!\\n\\nDiscount on RO systems\\nOrder: https://wa.me/${wa}`; else if(t==="stock") msg=`📦 New Stock Arrived!\\nFresh RO systems & spares available.\\nOrder: https://wa.me/${wa}`; else if(t==="festive") msg=`🎊 Festival Greetings from Pandey Enterprises!\\nSpecial discounts. Order: https://wa.me/${wa}`; document.getElementById('brcmMessage').value=msg; }
+function sendBroadcast(){ let msg=document.getElementById('brcmMessage').value.trim(); if(!msg){ showToast('Enter message'); return; } let selected=[...document.querySelectorAll('#brcmUserList input:checked')].map(cb=>cb.value); if(selected.length===0){ showToast('Select users'); return; } if(!confirm(`Send to ${selected.length} users?`)) return; selected.forEach((phone,idx)=>{ let clean=phone.replace(/\D/g,''); if(clean.length===10) clean='91'+clean; setTimeout(()=>window.open(`https://wa.me/${clean}?text=${encodeURIComponent(msg)}`,'_blank'), idx*1000); }); showToast(`Broadcast to ${selected.length} users`); }
+function sendCustomMessage(){ let phone=document.getElementById('customPhone').value.replace(/\D/g,''); let msg=document.getElementById('brcmMessage').value.trim(); if(!phone||!msg){ showToast('Enter phone and message'); return; } if(phone.length===10) phone='91'+phone; window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`,'_blank'); }
+function saveSettings(){ settings.whatsappNo=document.getElementById('whatsappNo').value; settings.freeMin=parseInt(document.getElementById('freeMin').value)||999; settings.defaultCourier=parseInt(document.getElementById('defaultCourier').value)||49; saveSettingsData(); showToast('Settings saved'); }
+function changeAdminPassword(){ let old=document.getElementById('oldPass').value, newp=document.getElementById('newPass').value, conf=document.getElementById('confirmPass').value; if(old!==settings.adminPassword){ showToast('Current password wrong'); return; } if(newp!==conf){ showToast('Passwords do not match'); return; } if(newp.length<4){ showToast('Min 4 characters'); return; } settings.adminPassword=newp; saveSettingsData(); showToast('Password changed'); }
+function clearAllData(){ if(confirm('Clear all orders, users, enquiries?')){ orders=[]; customers=[]; bulkEnquiries=[]; invoices=[]; localStorage.removeItem('pe_orders'); localStorage.removeItem('pe_customers'); localStorage.removeItem('pe_bulk'); localStorage.removeItem('pe_invoices'); saveOrders(); saveCustomers(); saveBulk(); saveInvoices(); loadAdminOrders(); loadAdminCustomers(); loadEnquiriesList(); loadInvoices(); showToast('Data cleared'); } }
 function openAdminPanel(){ document.getElementById('adminOverlay').classList.add('open'); if(adminLoggedIn) showAdminDash(); else { document.getElementById('adminLoginPanel').style.display='block'; document.getElementById('adminDash').style.display='none'; } }
 function doAdminLogin(){ let user=document.getElementById('adminUser').value, pwd=document.getElementById('adminPwd').value; if(user==='admin' && pwd===settings.adminPassword){ adminLoggedIn=true; localStorage.setItem('pe_admin_session','true'); showAdminDash(); } else showToast('Wrong credentials! Use admin / admin123'); }
 function doAdminLogout(){ adminLoggedIn=false; localStorage.removeItem('pe_admin_session'); document.getElementById('adminLoginPanel').style.display='block'; document.getElementById('adminDash').style.display='none'; showToast('Logged out'); }
-function showAdminDash(){
-  document.getElementById('adminLoginPanel').style.display='none';
-  document.getElementById('adminDash').style.display='block';
-  document.getElementById('adminLogoutBtn').style.display='inline-block';
-  updateStats(); loadAdminProducts(); loadAdminOrders(); loadInvoices(); loadAdminCustomers(); loadEnquiriesList(); loadCategoriesListAdmin(); loadBroadcastUsers();
-  document.getElementById('whatsappNo').value=settings.whatsappNo;
-  document.getElementById('freeMin').value=settings.freeMin;
-  document.getElementById('defaultCourier').value=settings.defaultCourier;
-}
-function openUserModal(){ document.getElementById('userModal').classList.add('open'); document.getElementById('userModalBody').innerHTML = `<div class="form-group"><input type="tel" id="loginPhone" placeholder="Phone Number"></div><div class="form-group"><input type="password" id="loginPassword" placeholder="Password"></div><button class="btn-full btn-primary-full" onclick="demoLogin()">Login Demo</button><hr><button class="btn-full" onclick="showRegister()">New User? Register</button>`; }
+function showAdminDash(){ document.getElementById('adminLoginPanel').style.display='none'; document.getElementById('adminDash').style.display='block'; document.getElementById('adminLogoutBtn').style.display='inline-block'; updateStats(); loadAdminProducts(); loadAdminOrders(); loadInvoices(); loadAdminCustomers(); loadEnquiriesList(); loadCategoriesListAdmin(); loadBroadcastUsers(); document.getElementById('whatsappNo').value=settings.whatsappNo; document.getElementById('freeMin').value=settings.freeMin; document.getElementById('defaultCourier').value=settings.defaultCourier; }
+function openUserModal(){ document.getElementById('userModal').classList.add('open'); document.getElementById('userModalBody').innerHTML = `<div class="form-group"><input type="tel" id="loginPhone" placeholder="Phone Number"></div><div class="form-group"><input type="password" id="loginPassword" placeholder="Password"></div><button class="btn-full btn-primary-full" onclick="demoLogin()">Login Demo</button>`; }
 function closeUserModal(){ document.getElementById('userModal').classList.remove('open'); }
 function demoLogin(){ let phone=document.getElementById('loginPhone').value; if(phone){ let user={name:"Guest", phone}; currentUser=user; localStorage.setItem('pe_current_user',JSON.stringify(user)); updateUserNav(); closeUserModal(); showToast('Logged in'); } else showToast('Enter phone number'); }
 function updateUserNav(){ let btn=document.getElementById('userNavBtn'), label=document.getElementById('userNavLabel'); if(currentUser){ btn.classList.add('user-logged'); label.textContent=currentUser.name.split(' ')[0]; } else { btn.classList.remove('user-logged'); label.textContent='Login'; } }
 function sendBulkEnquiry(){ let name=document.getElementById('bulkName').value, phone=document.getElementById('bulkPhone').value, msg=document.getElementById('bulkMessage').value; if(!name||!phone) return; bulkEnquiries.unshift({id:Date.now(), name, phone, message:msg, date:new Date().toLocaleString()}); saveBulk(); window.open(`https://wa.me/${settings.whatsappNo}?text=Enquiry from ${name}: ${msg}`,'_blank'); closeBulkEnquiryModal(); showToast('Enquiry sent'); }
 function closeBulkEnquiryModal(){ document.getElementById('bulkEnquiryModal').classList.remove('open'); }
 
-// Event Listeners
 document.getElementById('cartOpenBtn')?.addEventListener('click', openCart);
 document.getElementById('cartCloseBtn')?.addEventListener('click', closeCart);
 document.getElementById('overlay')?.addEventListener('click', closeCart);

@@ -10,47 +10,56 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Inter', sans-serif; background: #f8fafc; color: #1a2c3e; line-height: 1.5; }
     
+    /* Modern Top Bar */
     .top-bar { background: #0a2b28; color: #b8dfd8; padding: 8px 5%; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 0.75rem; }
     .top-bar span { display: flex; align-items: center; gap: 8px; }
+    .top-bar i { width: 14px; }
     
-    .navbar { background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px); padding: 0 5%; display: flex; justify-content: space-between; align-items: center; height: 70px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05); }
+    /* Modern Navbar */
+    .navbar { background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px); padding: 0 5%; display: flex; justify-content: space-between; align-items: center; height: 70px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05); border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
     .logo h1 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.4rem; font-weight: 800; background: linear-gradient(135deg, #0a2b28 0%, #1f6e6a 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
     .logo p { font-size: 0.65rem; color: #5f7f6e; }
     .nav-links { display: flex; gap: 2rem; }
-    .nav-links a { text-decoration: none; color: #2c4b3e; font-weight: 500; font-size: 0.9rem; }
+    .nav-links a { text-decoration: none; color: #2c4b3e; font-weight: 500; font-size: 0.9rem; transition: color 0.2s; }
+    .nav-links a:hover { color: #1f6e6a; }
     .nav-actions { display: flex; align-items: center; gap: 12px; }
-    .btn-icon { background: #f0f4f2; border: none; width: 42px; height: 42px; border-radius: 40px; cursor: pointer; font-size: 1.1rem; color: #1a3b32; }
+    .btn-icon { background: #f0f4f2; border: none; width: 42px; height: 42px; border-radius: 40px; cursor: pointer; font-size: 1.1rem; color: #1a3b32; transition: all 0.2s; }
+    .btn-icon:hover { background: #e2e9e5; transform: scale(1.02); }
     .cart-btn { position: relative; background: #1f6e6a; color: white; }
-    .cart-badge { position: absolute; top: -6px; right: -6px; background: #e67e22; color: white; width: 20px; height: 20px; border-radius: 50%; font-size: 0.65rem; display: flex; align-items: center; justify-content: center; }
-    .hamburger { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; }
-    .mobile-menu { display: none; background: white; padding: 1rem 5%; flex-direction: column; gap: 1rem; position: sticky; top: 70px; z-index: 999; }
-    .mobile-menu a { text-decoration: none; color: #1a3b32; padding: 8px 0; }
+    .cart-btn:hover { background: #0e5a57; }
+    .cart-badge { position: absolute; top: -6px; right: -6px; background: #e67e22; color: white; width: 20px; height: 20px; border-radius: 50%; font-size: 0.65rem; display: flex; align-items: center; justify-content: center; font-weight: 700; }
+    .hamburger { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #1a3b32; }
+    .mobile-menu { display: none; background: white; padding: 1rem 5%; flex-direction: column; gap: 1rem; border-bottom: 1px solid #eef2ef; position: sticky; top: 70px; z-index: 999; }
+    .mobile-menu a { text-decoration: none; color: #1a3b32; font-weight: 500; padding: 8px 0; }
     
+    /* Hero Section Modern */
     .hero-modern { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; padding: 4rem 5%; background: linear-gradient(135deg, #ffffff 0%, #f1f7f5 100%); align-items: center; }
     .hero-content h1 { font-size: 3rem; font-weight: 800; line-height: 1.2; font-family: 'Plus Jakarta Sans', sans-serif; color: #0a2b28; }
     .hero-gradient { background: linear-gradient(135deg, #1f6e6a, #e67e22); -webkit-background-clip: text; background-clip: text; color: transparent; }
     .hero-badge { display: inline-block; background: #eef3f0; padding: 0.3rem 1rem; border-radius: 40px; font-size: 0.75rem; font-weight: 600; color: #1f6e6a; margin-bottom: 1.5rem; }
-    .hero-desc { font-size: 1rem; color: #4a6b5e; margin: 1.5rem 0 2rem; }
+    .hero-desc { font-size: 1rem; color: #4a6b5e; margin: 1.5rem 0 2rem; max-width: 90%; }
     .hero-stats { display: flex; gap: 2rem; margin-top: 2rem; flex-wrap: wrap; }
     .stat-item h3 { font-size: 1.5rem; font-weight: 800; color: #1f6e6a; }
-    .btn-primary { background: #e67e22; color: white; padding: 12px 28px; border-radius: 40px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 10px; border: none; cursor: pointer; }
+    .btn-primary { background: #e67e22; color: white; padding: 12px 28px; border-radius: 40px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 10px; transition: all 0.3s; border: none; cursor: pointer; }
     .btn-primary:hover { background: #d46b1a; transform: translateY(-2px); }
     .btn-outline { background: transparent; border: 1.5px solid #1f6e6a; color: #1f6e6a; padding: 12px 28px; border-radius: 40px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
     .hero-card { background: white; border-radius: 2rem; padding: 1.5rem; box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.15); text-align: center; width: 280px; }
     .hero-icon { font-size: 3.5rem; color: #1f6e6a; }
     
+    /* Category Pills */
     .cat-section { padding: 2rem 5% 0; }
     .cat-title { text-align: center; font-size: 2rem; font-weight: 700; margin-bottom: 1.5rem; color: #1a3b32; }
     .cat-tabs-modern { display: flex; justify-content: center; gap: 0.8rem; flex-wrap: wrap; margin-bottom: 2rem; }
     .cat-pill { background: white; border: 1px solid #e0ece6; padding: 0.6rem 1.6rem; border-radius: 50px; cursor: pointer; font-size: 0.85rem; color: #3a5a4c; }
     .cat-pill.active { background: #1f6e6a; color: white; }
     
+    /* Product Grid */
     .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.8rem; padding: 1rem 5% 3rem; }
     .product-card { background: white; border-radius: 1.2rem; overflow: hidden; transition: all 0.3s; border: 1px solid #edf3ef; }
     .product-card:hover { transform: translateY(-5px); box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.1); }
     .product-img { background: #f4faf7; height: 180px; display: flex; align-items: center; justify-content: center; position: relative; }
     .product-img i { font-size: 3.5rem; color: #1f6e6a; }
-    .product-badge { position: absolute; top: 12px; left: 12px; background: #e67e22; color: white; padding: 4px 10px; border-radius: 30px; font-size: 0.7rem; }
+    .product-badge { position: absolute; top: 12px; left: 12px; background: #e67e22; color: white; padding: 4px 10px; border-radius: 30px; font-size: 0.7rem; font-weight: 700; }
     .stock-indicator { position: absolute; top: 12px; right: 12px; background: rgba(0,0,0,0.7); color: white; padding: 4px 10px; border-radius: 30px; font-size: 0.7rem; }
     .stock-indicator.low { background: #e67e22; }
     .stock-indicator.out { background: #dc2626; }
@@ -62,11 +71,14 @@
     .courier-note { font-size: 0.7rem; color: #e67e22; margin: 5px 0; }
     .add-cart-btn { width: 100%; background: #f0f4f2; border: none; padding: 10px; border-radius: 40px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; color: #1f6e6a; }
     .add-cart-btn:hover:not(:disabled) { background: #1f6e6a; color: white; }
+    .add-cart-btn:disabled { opacity: 0.5; cursor: not-allowed; }
     
+    /* Commercial Banner */
     .banner-modern { background: linear-gradient(115deg, #0f2c27 0%, #1f5e59 100%); margin: 0 5% 3rem; border-radius: 1.5rem; padding: 2.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
     .footer-modern { background: #0a1f1c; color: #b0cfc4; padding: 2.5rem 5% 1.5rem; }
     .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; }
     
+    /* Cart Sidebar */
     .cart-sidebar { position: fixed; top: 0; right: -100%; width: 380px; max-width: 90vw; height: 100%; background: white; z-index: 1100; transition: right 0.3s; padding: 1.2rem; display: flex; flex-direction: column; }
     .cart-sidebar.open { right: 0; }
     .overlay { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.5); z-index: 1050; display: none; }
@@ -78,12 +90,12 @@
     .admin-overlay { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.85); z-index: 2000; display: none; overflow-y: auto; padding: 20px; }
     .admin-overlay.open { display: block; }
     .admin-box { background: white; max-width: 1300px; margin: 0 auto; border-radius: 20px; overflow: hidden; }
-    .admin-bar { background: #0a2b28; color: white; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; }
+    .admin-bar { background: #0a2b28; color: white; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
     .admin-stats { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem; }
     .stat-card { background: linear-gradient(135deg, #e8f5f7, #d0eef3); padding: 0.5rem 1rem; border-radius: 12px; text-align: center; min-width: 80px; }
     .stat-number { font-size: 1.2rem; font-weight: 700; color: #1f6e6a; }
     .a-tabs-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; border-bottom: 2px solid #e0eaf0; padding-bottom: 12px; }
-    .a-tab { background: none; border: 1.5px solid #e0eaf0; padding: 7px 14px; border-radius: 8px; cursor: pointer; font-size: 0.82rem; }
+    .a-tab { background: none; border: 1.5px solid #e0eaf0; padding: 7px 14px; border-radius: 8px; cursor: pointer; font-size: 0.82rem; color: #6b8499; }
     .a-tab.active { background: #1f6e6a; color: white; border-color: #1f6e6a; }
     .tab-panel { display: none; }
     .tab-panel.active { display: block; }
@@ -95,6 +107,11 @@
     .admin-input { padding: 0.4rem; font-size: 0.7rem; width: 100%; border: 1px solid #ddd; border-radius: 6px; }
     .delete-btn { background: #fee2e2; color: #dc2626; border: none; padding: 4px 10px; border-radius: 6px; cursor: pointer; }
     .save-btn { background: #1f6e6a; color: white; border: none; padding: 0.5rem 1rem; border-radius: 10px; cursor: pointer; }
+    .stock-switch { width: 35px; height: 18px; background: #ccc; border-radius: 18px; position: relative; cursor: pointer; display: inline-block; }
+    .stock-switch.active { background: #1f6e6a; }
+    .stock-switch::after { content: ''; width: 14px; height: 14px; background: white; border-radius: 50%; position: absolute; top: 2px; left: 2px; transition: 0.2s; }
+    .stock-switch.active::after { left: 19px; }
+    .invoice-card { background: white; border: 1px solid #e0eaf0; border-radius: 12px; padding: 15px; margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
     .modal-overlay { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.7); z-index: 600; display: none; align-items: center; justify-content: center; padding: 20px; }
     .modal-overlay.open { display: flex; }
     .modal-box { background: white; border-radius: 20px; width: 100%; max-width: 500px; overflow: hidden; }
@@ -102,7 +119,8 @@
     .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1.5px solid #e0eaf0; border-radius: 10px; }
     .btn-full { width: 100%; padding: 12px; border: none; border-radius: 10px; font-weight: 600; cursor: pointer; }
     .btn-primary-full { background: #1f6e6a; color: white; }
-    .floating-wa { position: fixed; bottom: 24px; right: 24px; background: #25D366; width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.8rem; z-index: 900; text-decoration: none; }
+    .floating-wa { position: fixed; bottom: 24px; right: 24px; background: #25D366; width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.8rem; box-shadow: 0 4px 15px rgba(37,211,102,0.4); z-index: 900; text-decoration: none; }
+    
     .invoice-container { background: white; max-width: 800px; margin: 0 auto; padding: 30px; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.2); }
     .invoice-header { display: flex; justify-content: space-between; border-bottom: 2px solid #e67e22; padding-bottom: 20px; margin-bottom: 20px; flex-wrap: wrap; }
     .invoice-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
@@ -113,22 +131,24 @@
     
     @media (max-width: 750px) {
       .hero-modern { grid-template-columns: 1fr; text-align: center; padding: 2rem 5%; }
+      .hero-desc { max-width: 100%; }
       .nav-links { display: none; }
       .hamburger { display: block; }
-      .products-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+      .products-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 1rem; }
     }
   </style>
 </head>
 <body>
 
+<!-- Top Bar -->
 <div class="top-bar">
   <span><i class="fas fa-tint"></i> RO Specialist · Domestic & Commercial</span>
   <span><i class="fas fa-phone-alt"></i> +91 97083 73534</span>
   <span><i class="fas fa-map-marker-alt"></i> Siwan, Bihar</span>
   <span><i class="fas fa-truck"></i> Free Delivery Above ₹999</span>
-  <span><i class="fab fa-whatsapp"></i> Auto Bill on WhatsApp</span>
 </div>
 
+<!-- Navbar -->
 <div class="navbar">
   <div class="logo"><h1>Azam Enterprises</h1><p>RO Systems & Spare Parts</p></div>
   <div class="nav-links"><a href="#">Home</a><a href="#products">Products</a><a href="#commercial">Commercial</a><a href="#contact">Contact</a></div>
@@ -140,11 +160,12 @@
 </div>
 <div class="mobile-menu" id="mobileMenu"><a href="#">Home</a><a href="#products">Products</a><a href="#commercial">Commercial</a><a href="#contact">Contact</a></div>
 
+<!-- Hero Section -->
 <div class="hero-modern">
   <div class="hero-content">
     <span class="hero-badge"><i class="fas fa-certificate"></i> Trusted Since 2018</span>
     <h1>Pure Water <span class="hero-gradient">Solutions</span><br>For Healthy Living</h1>
-    <p class="hero-desc">Premium RO systems, genuine spare parts, membranes & filters. Free delivery on orders above ₹999. Auto bill on WhatsApp after order!</p>
+    <p class="hero-desc">Premium RO systems, genuine spare parts, membranes & filters. Free delivery on orders above ₹999. Serving Siwan since 2018.</p>
     <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
       <a href="https://wa.me/919708373534" class="btn-primary" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Order</a>
       <a href="#products" class="btn-outline"><i class="fas fa-store"></i> Shop Now</a>
@@ -165,25 +186,29 @@
   </div>
 </div>
 
+<!-- Categories -->
 <div class="cat-section" id="products"><h2 class="cat-title">Shop by Category</h2><div class="cat-tabs-modern" id="categoryTabsContainer"></div></div>
 <div class="products-grid" id="productsGrid"></div>
 
+<!-- Commercial Banner -->
 <div id="commercial" class="banner-modern">
   <div><h2><i class="fas fa-industry"></i> Industrial & Commercial RO</h2><p>Custom solutions for hotels, factories, hospitals — get bulk pricing</p><button class="btn-primary" id="commercialEnqBtn" style="margin-top: 10px; background: #e67e22;">Get Quote →</button></div>
   <i class="fas fa-building" style="font-size: 3rem; color: rgba(255,255,255,0.3);"></i>
 </div>
 
+<!-- Footer -->
 <div class="footer-modern" id="contact">
   <div class="footer-grid">
     <div><h3 style="color: white;">Azam Enterprises</h3><p>Siwan, Bihar - 841226</p><p>GST: 10ABCDE1234F1Z5</p></div>
     <div><h4 style="color: #d1e6df;">Contact</h4><p><i class="fas fa-phone"></i> +91 97083 73534<br><i class="fab fa-whatsapp"></i> WhatsApp: +91 97083 73534</p></div>
-    <div><h4 style="color: #d1e6df;">Features</h4><p>✓ Free Delivery Above ₹999<br>✓ Auto Bill on WhatsApp<br>✓ COD Available</p></div>
+    <div><h4 style="color: #d1e6df;">Policies</h4><p>Free Delivery Above ₹999<br>Courier: ₹49 for orders below ₹999<br>COD Available</p></div>
   </div>
   <div style="text-align: center; padding-top: 1.5rem; border-top: 1px solid #2a4d44;">© 2025 Azam Enterprises — Pure Water Specialists, Siwan</div>
 </div>
 
 <a href="https://wa.me/919708373534?text=Hello%20Azam%20Enterprises" class="floating-wa" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
+<!-- Cart Sidebar -->
 <div class="overlay" id="overlay"></div>
 <div class="cart-sidebar" id="cartSidebar">
   <div style="display: flex; justify-content: space-between;"><h3><i class="fas fa-shopping-bag"></i> Your Cart</h3><button id="cartCloseBtn" style="background: none; border: none; font-size: 1.4rem;">&times;</button></div>
@@ -192,13 +217,14 @@
     <div style="display: flex; justify-content: space-between;"><span>Subtotal:</span><span id="cartSubtotal">₹0</span></div>
     <div style="display: flex; justify-content: space-between; margin: 5px 0;"><span>Courier Charge:</span><span id="cartCourier">₹0</span></div>
     <div style="display: flex; justify-content: space-between; font-weight: 700; font-size: 1.1rem;"><span>Total:</span><span id="cartTotal">₹0</span></div>
-    <button id="waOrderBtn" class="btn-primary" style="width:100%; background:#25D366; margin-top:12px;"><i class="fab fa-whatsapp"></i> Place Order & Auto Bill</button>
-    <p style="font-size:0.7rem; text-align:center; margin-top:8px; color:#6b8499;">✓ Bill automatically sent to your WhatsApp</p>
+    <button id="waOrderBtn" class="btn-primary" style="width:100%; background:#25D366; margin-top:12px;"><i class="fab fa-whatsapp"></i> Generate Bill & Order</button>
   </div>
 </div>
 
+<!-- Invoice Modal -->
 <div class="modal-overlay" id="invoiceModal"><div class="modal-box" style="max-width: 800px; background: transparent;"><div id="invoiceContent"></div></div></div>
 
+<!-- Admin Panel -->
 <div class="admin-overlay" id="adminOverlay">
   <div class="admin-box">
     <div class="admin-bar"><h2>Admin Dashboard</h2><button id="adminCloseBtn" style="background:none;border:none;color:white;font-size:1.2rem;">&times;</button></div>
@@ -221,7 +247,7 @@
         </div>
         <div id="panelProducts" class="tab-panel active">
           <div class="add-form"><h4>Add Product</h4><div class="add-form-row"><input type="text" id="newProductName" placeholder="Name"><input type="text" id="newProductCategory" placeholder="Category"></div><div class="add-form-row"><input type="number" id="newProductPrice" placeholder="Price"><input type="number" id="newProductStock" placeholder="Stock"></div><div class="add-form-row"><input type="number" id="newProductCourier" placeholder="Courier Charge" value="49"><input type="number" id="newProductDiscount" placeholder="Discount %"></div><input type="text" id="newProductDesc" placeholder="Description"><button class="btn-add-item" onclick="addProduct()">Add Product</button></div>
-          <table class="admin-table"><thead><th>Product</th><th>Price</th><th>Courier</th><th>Stock</th><th>Action</th></thead><tbody id="adminProductsList"></tbody></table>
+          <table class="admin-table"><thead> <th>Product</th><th>Price</th><th>Courier</th><th>Stock</th><th>Action</th> </thead><tbody id="adminProductsList"></tbody></table>
           <button class="save-btn" onclick="saveAllProducts()">Save All</button>
         </div>
         <div id="panelOrders" class="tab-panel"><table class="admin-table"><thead><th>#</th><th>Customer</th><th>Phone</th><th>Items</th><th>Total</th><th>Status</th><th>Action</th></thead><tbody id="ordersTableBody"></tbody></table></div>
@@ -231,7 +257,7 @@
         <div id="panelSettings" class="tab-panel">
           <div class="form-group"><label>Default Courier Charge (₹)</label><input type="number" id="defaultCourier" value="49"></div>
           <div class="form-group"><label>Free Delivery Above (₹)</label><input type="number" id="freeMin" value="999"></div>
-          <div class="form-group"><label>WhatsApp Number (Business)</label><input type="text" id="whatsappNo" value="919708373534"></div>
+          <div class="form-group"><label>WhatsApp Number</label><input type="text" id="whatsappNo" value="919708373534"></div>
           <button class="save-btn" onclick="saveSettings()">Save Settings</button>
           <hr><h4>Change Password</h4>
           <div class="form-group"><input type="password" id="oldPass" placeholder="Current"></div>
@@ -272,7 +298,7 @@ function saveCustomers() { localStorage.setItem('azam_customers', JSON.stringify
 function saveBulk() { localStorage.setItem('azam_bulk', JSON.stringify(bulkEnquiries)); }
 function saveSettingsData() { localStorage.setItem('azam_settings', JSON.stringify(settings)); }
 function fmtPrice(p) { return '₹' + Number(p).toLocaleString('en-IN'); }
-function showToast(msg) { let t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),3000); }
+function showToast(msg) { let t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),2500); }
 
 function updateStats() {
   if(document.getElementById('adminStats')) {
@@ -341,205 +367,74 @@ function updateCartUI() {
   else body.innerHTML = cart.map(item => `<div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid #eef2ef;"><div><strong>${item.name}</strong><br>${fmtPrice(item.price)} x ${item.qty}</div><div><button onclick="changeQty(${item.id},-1)" style="background:#f0f2f0; border:none; width:28px; border-radius:20px;">-</button> <span>${item.qty}</span> <button onclick="changeQty(${item.id},1)" style="background:#f0f2f0; border:none; width:28px; border-radius:20px;">+</button></div></div>`).join('');
 }
 
-// Generate Beautiful Invoice HTML
-function generateInvoiceHTML(orderData, invoiceNo) {
-  let date = new Date().toLocaleDateString('en-IN', { day:'numeric', month:'long', year:'numeric' });
-  let time = new Date().toLocaleTimeString('en-IN');
+function generateInvoice(orderData) {
+  let invoiceNo = 'INV-' + Date.now().toString().slice(-8);
+  let date = new Date().toLocaleDateString('en-IN');
   return `
     <div class="invoice-container">
       <div class="invoice-header">
-        <div class="business-details">
-          <h2 style="color:#0a2b28;">Azam Enterprises</h2>
-          <p>Siwan, Bihar - 841226</p>
-          <p>📞 +91 97083 73534 | 📧 azamro@gmail.com</p>
-          <p>GST: 10ABCDE1234F1Z5</p>
-        </div>
-        <div class="invoice-title">
-          <h3 style="color:#e67e22;">TAX INVOICE</h3>
-          <p><strong>Invoice No:</strong> ${invoiceNo}</p>
-          <p><strong>Date:</strong> ${date}</p>
-          <p><strong>Time:</strong> ${time}</p>
-        </div>
+        <div><h2>Azam Enterprises</h2><p>Siwan, Bihar - 841226</p><p>📞 +91 97083 73534 | GST: 10ABCDE1234F1Z5</p></div>
+        <div><h3 style="color:#e67e22;">TAX INVOICE</h3><p>${invoiceNo}</p><p>Date: ${date}</p></div>
       </div>
-      <div class="customer-details" style="background:#f8fafb; padding:15px; border-radius:12px; margin-bottom:20px; display:flex; justify-content:space-between; flex-wrap:wrap;">
-        <div><strong>🏪 Bill To:</strong><br>${orderData.name}<br>📞 ${orderData.phone}</div>
-        <div><strong>💰 Payment Mode:</strong><br>Cash on Delivery</div>
-        <div><strong>🚚 Delivery:</strong><br>${orderData.courier === 0 ? 'FREE' : fmtPrice(orderData.courier)}</div>
+      <div class="customer-details" style="background:#f8fafb; padding:15px; border-radius:12px; display:flex; justify-content:space-between;">
+        <div><strong>Bill To:</strong><br>${orderData.name}<br>${orderData.phone}</div>
+        <div><strong>Payment:</strong><br>Cash/Online</div>
       </div>
       <table class="invoice-table">
-        <thead>
-          <tr style="background:#f0f4f2;">
-            <th>#</th><th>Item Description</th><th>Qty</th><th>Unit Price</th><th>Amount</th>
-          </tr>
-        </thead>
-        <tbody>
-          ${orderData.items.map((item, idx) => `
-            <tr>
-              <td>${idx+1}</td>
-              <td>${item.name}</td>
-              <td style="text-align:center">${item.qty}</td>
-              <td>${fmtPrice(item.price)}</td>
-              <td>${fmtPrice(item.price * item.qty)}</td>
-            </tr>
-          `).join('')}
-        </tbody>
+        <thead><tr><th>#</th><th>Item</th><th>Qty</th><th>Price</th><th>Amount</th></tr></thead>
+        <tbody>${orderData.items.map((item, idx) => `<tr><td>${idx+1}</td><td>${item.name}</td><td>${item.qty}</td><td>${fmtPrice(item.price)}</td><td>${fmtPrice(item.price * item.qty)}</td></tr>`).join('')}</tbody>
       </table>
       <div class="totals">
         <div>Subtotal: ${fmtPrice(orderData.subtotal)}</div>
-        <div>Courier Charges: ${orderData.courier === 0 ? 'FREE' : fmtPrice(orderData.courier)}</div>
-        <div style="font-size:1.2rem; font-weight:700; color:#e67e22; margin-top:10px;">Grand Total: ${fmtPrice(orderData.total)}</div>
+        <div>Delivery: ${orderData.courier === 0 ? 'FREE' : fmtPrice(orderData.courier)}</div>
+        <div class="grand-total">Grand Total: ${fmtPrice(orderData.total)}</div>
       </div>
       <div class="invoice-footer" style="text-align:center; margin-top:20px; padding-top:20px; border-top:1px solid #e0eaf0;">
-        <p style="margin-bottom:5px;">📌 Terms: Goods once sold cannot be returned. This is a computer generated invoice.</p>
-        <p>⭐ Thank you for shopping with Azam Enterprises! ⭐</p>
-        <p style="margin-top:10px;">📞 For support: +91 97083 73534 | 🌐 Siwan, Bihar</p>
+        <p>Thanks for shopping with Azam Enterprises!</p>
+        <button class="btn-print" onclick="window.print()" style="background:#0a2b28; color:white; border:none; padding:8px 20px; border-radius:8px; margin-top:10px;"><i class="fas fa-print"></i> Print Invoice</button>
       </div>
     </div>
   `;
 }
 
-// Generate WhatsApp Message with Bill
-function generateWhatsAppBillMessage(orderData, invoiceNo) {
-  let date = new Date().toLocaleDateString('en-IN');
-  let message = `🏪 *AZAM ENTERPRISES* 🏪\n`;
-  message += `━━━━━━━━━━━━━━━━━━━━\n`;
-  message += `📄 *TAX INVOICE* 📄\n`;
-  message += `━━━━━━━━━━━━━━━━━━━━\n`;
-  message += `Invoice No: ${invoiceNo}\n`;
-  message += `Date: ${date}\n`;
-  message += `━━━━━━━━━━━━━━━━━━━━\n`;
-  message += `👤 *Customer:* ${orderData.name}\n`;
-  message += `📞 *Phone:* ${orderData.phone}\n`;
-  message += `━━━━━━━━━━━━━━━━━━━━\n`;
-  message += `📦 *ITEMS PURCHASED* 📦\n`;
-  message += `━━━━━━━━━━━━━━━━━━━━\n`;
-  orderData.items.forEach((item, idx) => {
-    message += `${idx+1}. ${item.name}\n`;
-    message += `   Qty: ${item.qty} × ${fmtPrice(item.price)} = ${fmtPrice(item.price * item.qty)}\n`;
-  });
-  message += `━━━━━━━━━━━━━━━━━━━━\n`;
-  message += `💰 *BILL SUMMARY* 💰\n`;
-  message += `Subtotal: ${fmtPrice(orderData.subtotal)}\n`;
-  message += `Delivery: ${orderData.courier === 0 ? 'FREE' : fmtPrice(orderData.courier)}\n`;
-  message += `━━━━━━━━━━━━━━━━━━━━\n`;
-  message += `*GRAND TOTAL: ${fmtPrice(orderData.total)}*\n`;
-  message += `━━━━━━━━━━━━━━━━━━━━\n`;
-  message += `✅ Thank you for your purchase!\n`;
-  message += `📞 For support: +91 97083 73534\n`;
-  message += `📍 Siwan, Bihar\n`;
-  message += `━━━━━━━━━━━━━━━━━━━━\n`;
-  message += `⭐ Azam Enterprises - Pure Water Specialists ⭐`;
-  return message;
-}
-
-// Main Order Function with Auto WhatsApp Bill
-function placeOrderAndSendBill() {
+function sendWhatsAppOrder() {
   if(cart.length === 0) { showToast('Cart is empty!'); return; }
-  
-  let name = prompt('👤 Enter your full name:');
+  let name = prompt('Enter your full name:');
   if(!name) return;
-  let phone = prompt('📞 Enter WhatsApp number (with +91):', '+91');
+  let phone = prompt('Enter WhatsApp number (with +91):', '+91');
   if(!phone) return;
-  
-  // Calculate totals
   let subtotal = cart.reduce((s,i)=>s+i.price*i.qty,0);
   let maxCourier = Math.max(...cart.map(i=>i.courierCharge||0),0);
   let courier = subtotal >= settings.freeMin ? 0 : maxCourier;
   let total = subtotal + courier;
   let orderItems = cart.map(i => ({ name: i.name, qty: i.qty, price: i.price }));
-  let invoiceNo = 'AZM-' + Date.now().toString().slice(-8);
   let orderData = { name, phone, items: orderItems, subtotal, courier, total };
   
-  // Generate Invoice HTML and WhatsApp Message
-  let invoiceHTML = generateInvoiceHTML(orderData, invoiceNo);
-  let whatsappMessage = generateWhatsAppBillMessage(orderData, invoiceNo);
-  
-  // Show invoice in modal
-  document.getElementById('invoiceContent').innerHTML = invoiceHTML;
+  document.getElementById('invoiceContent').innerHTML = generateInvoice(orderData);
   document.getElementById('invoiceModal').classList.add('open');
   
-  // Update stock
-  cart.forEach(item => { 
-    let prod = products.find(p => p.id === item.id); 
-    if(prod) prod.stock -= item.qty; 
-  });
+  let msg = `*AZAM ENTERPRISES - NEW ORDER*\n\n*Customer:* ${name}\n*Phone:* ${phone}\n\n*Items:*\n`;
+  cart.forEach(i => msg += `• ${i.name} x ${i.qty} = ${fmtPrice(i.price * i.qty)}\n`);
+  msg += `\nSubtotal: ${fmtPrice(subtotal)}\nDelivery: ${courier===0?'FREE':fmtPrice(courier)}\n*Total: ${fmtPrice(total)}*\n\nThank you! 🚀`;
+  
+  cart.forEach(item => { let prod = products.find(p => p.id === item.id); if(prod) prod.stock -= item.qty; });
   saveProducts();
-  
-  // Save order
-  let order = { 
-    id: Date.now(), 
-    name, 
-    phone, 
-    items: cart.map(i=>`${i.name} x${i.qty}`).join(', '), 
-    total, 
-    date: new Date().toLocaleString(), 
-    status: 'Confirmed',
-    invoiceNo: invoiceNo
-  };
-  orders.unshift(order); 
-  saveOrders();
-  
-  // Save invoice
-  let invoice = { 
-    id: Date.now(), 
-    invoiceNo: invoiceNo,
-    orderId: order.id, 
-    customer: name, 
-    phone, 
-    items: orderItems, 
-    subtotal, 
-    courier, 
-    total, 
-    date: new Date().toLocaleString() 
-  };
-  invoices.unshift(invoice); 
-  saveInvoices();
-  
-  // Save/Update customer
-  if(!customers.find(c=>c.phone===phone)) {
-    customers.unshift({ name, phone, orders: 1, lastOrder: new Date().toLocaleString() });
-  } else { 
-    let c = customers.find(c=>c.phone===phone); 
-    c.orders = (c.orders||0)+1;
-    c.lastOrder = new Date().toLocaleString();
-  }
+  let order = { id: Date.now(), name, phone, items: cart.map(i=>`${i.name} x${i.qty}`).join(', '), total, date: new Date().toLocaleString(), status: 'Confirmed' };
+  orders.unshift(order); saveOrders();
+  let invoice = { id: Date.now(), orderId: order.id, customer: name, phone, items: orderItems, subtotal, courier, total, date: new Date().toLocaleString() };
+  invoices.unshift(invoice); saveInvoices();
+  if(!customers.find(c=>c.phone===phone)) customers.unshift({ name, phone, orders: 1 });
+  else { let c = customers.find(c=>c.phone===phone); c.orders = (c.orders||0)+1; }
   saveCustomers();
-  
-  // 🔥 AUTO SEND BILL TO CUSTOMER'S WHATSAPP 🔥
-  let customerWhatsApp = phone.replace(/\D/g, '');
-  if(customerWhatsApp.length === 10) customerWhatsApp = '91' + customerWhatsApp;
-  
-  // Send bill to customer's WhatsApp
-  setTimeout(() => {
-    window.open(`https://wa.me/${customerWhatsApp}?text=${encodeURIComponent(whatsappMessage)}`, '_blank');
-  }, 500);
-  
-  // Also send to business WhatsApp for record
-  setTimeout(() => {
-    let businessMsg = `📋 *NEW ORDER RECEIVED*\nCustomer: ${name}\nPhone: ${phone}\nInvoice: ${invoiceNo}\nTotal: ${fmtPrice(total)}`;
-    window.open(`https://wa.me/${settings.whatsappNo}?text=${encodeURIComponent(businessMsg)}`, '_blank');
-  }, 1000);
-  
-  // Clear cart
-  cart = []; 
-  updateCartUI(); 
-  closeCart();
-  
-  showToast(`✅ Order placed! Bill sent to ${phone} via WhatsApp`);
+  window.open(`https://wa.me/${settings.whatsappNo}?text=${encodeURIComponent(msg)}`,'_blank');
+  cart = []; updateCartUI(); closeCart();
+  showToast('Order placed! Invoice generated.');
 }
 
 // Admin Functions
 function loadAdminProducts() {
   let tbody = document.getElementById('adminProductsList');
-  tbody.innerHTML = products.map(p => `
-    <tr>
-      <td><input class="admin-input" id="name_${p.id}" value="${p.name}"></td>
-      <td><input class="admin-input" id="price_${p.id}" value="${p.price}"></td>
-      <td><input class="admin-input" id="courier_${p.id}" value="${p.courierCharge||0}"></td>
-      <td><input class="admin-input" id="stock_${p.id}" value="${p.stock}" style="width:60px"></td>
-      <td><button class="delete-btn" onclick="deleteProduct(${p.id})">Delete</button></td>
-    </tr>
-  `).join('');
+  tbody.innerHTML = products.map(p => `<tr><td><input class="admin-input" id="name_${p.id}" value="${p.name}"></td><td><input class="admin-input" id="price_${p.id}" value="${p.price}"></td><td><input class="admin-input" id="courier_${p.id}" value="${p.courierCharge||0}"></td><td><input class="admin-input" id="stock_${p.id}" value="${p.stock}" style="width:60px"></td><td><button class="delete-btn" onclick="deleteProduct(${p.id})">Del</button></td></tr>`).join('');
 }
 function deleteProduct(id){ if(confirm('Delete?')){ products=products.filter(x=>x.id!==id); saveProducts(); loadAdminProducts(); renderProducts(); showToast('Deleted'); } }
 function addProduct(){
@@ -562,62 +457,18 @@ function saveAllProducts(){
 }
 function loadAdminOrders(){
   let tbody = document.getElementById('ordersTableBody');
-  tbody.innerHTML = orders.map((o,i)=>`
-    <tr>
-      <td>${i+1}</td>
-      <td>${o.name}</td>
-      <td>${o.phone}</td>
-      <td>${o.items}</td>
-      <td>${fmtPrice(o.total)}</td>
-      <td>${o.status}</td>
-      <td><button class="delete-btn" onclick="deleteOrder(${o.id})">Del</button></td>
-    </tr>
-  `).join('');
+  tbody.innerHTML = orders.map((o,i)=>`<tr><td>${i+1}</td><td>${o.name}</td><td>${o.phone}</td><td>${o.items}</td><td>${fmtPrice(o.total)}</td><td>${o.status}</td><td><button class="delete-btn" onclick="deleteOrder(${o.id})">Del</button></td></tr>`).join('');
 }
 function deleteOrder(id){ if(confirm('Delete?')){ orders=orders.filter(x=>x.id!==id); saveOrders(); loadAdminOrders(); showToast('Deleted'); } }
-function loadAdminCustomers(){ 
-  document.getElementById('customersTableBody').innerHTML = customers.map(c=>`
-    <tr>
-      <td>${c.name}</td>
-      <td>${c.phone}</td>
-      <td>${c.orders||0}</td>
-      <td><a href="https://wa.me/${c.phone.replace(/\D/g,'')}" target="_blank" style="color:#25D366;">Chat</a></td>
-    </tr>
-  `).join(''); 
-}
-function loadEnquiriesList(){ 
-  document.getElementById('enquiriesList').innerHTML = bulkEnquiries.map(e=>`
-    <div class="invoice-card"><strong>${e.name}</strong> (${e.phone})<br>${e.message}<br><small>${e.date}</small></div>
-  `).join('')||'<p>No enquiries</p>'; 
-}
-function loadInvoices(){ 
-  document.getElementById('invoiceList').innerHTML = invoices.map(inv=>`
-    <div class="invoice-card"><strong>${inv.invoiceNo || 'INV-'+inv.id}</strong> ${inv.customer} | ${fmtPrice(inv.total)}<br><small>${inv.date}</small></div>
-  `).join(''); 
-}
-function saveSettings(){ 
-  settings.defaultCourier = parseInt(document.getElementById('defaultCourier').value)||49; 
-  settings.freeMin = parseInt(document.getElementById('freeMin').value)||999; 
-  settings.whatsappNo = document.getElementById('whatsappNo').value; 
-  saveSettingsData(); showToast('Settings saved'); 
-}
-function changePassword(){ 
-  let old=document.getElementById('oldPass').value; 
-  let newp=document.getElementById('newPass').value; 
-  if(old==='admin123'){ settings.adminPassword=newp; saveSettingsData(); showToast('Password changed'); } 
-  else showToast('Wrong password'); 
-}
+function loadAdminCustomers(){ document.getElementById('customersTableBody').innerHTML = customers.map(c=>`<tr><td>${c.name}</td><td>${c.phone}</td><td>${c.orders||0}</td><td><a href="https://wa.me/${c.phone.replace(/\D/g,'')}" target="_blank">Chat</a></td></tr>`).join(''); }
+function loadEnquiriesList(){ document.getElementById('enquiriesList').innerHTML = bulkEnquiries.map(e=>`<div class="invoice-card"><strong>${e.name}</strong> (${e.phone})<br>${e.message}</div>`).join('')||'<p>No enquiries</p>'; }
+function loadInvoices(){ document.getElementById('invoiceList').innerHTML = invoices.map(inv=>`<div class="invoice-card"><strong>#${inv.id}</strong> ${inv.customer} | ${fmtPrice(inv.total)}<br><small>${inv.date}</small><button onclick="alert('Invoice ID: ${inv.id}')">View</button></div>`).join(''); }
+function saveSettings(){ settings.defaultCourier = parseInt(document.getElementById('defaultCourier').value)||49; settings.freeMin = parseInt(document.getElementById('freeMin').value)||999; settings.whatsappNo = document.getElementById('whatsappNo').value; saveSettingsData(); showToast('Settings saved'); }
+function changePassword(){ let old=document.getElementById('oldPass').value, newp=document.getElementById('newPass').value; if(old==='admin123'){ settings.adminPassword=newp; saveSettingsData(); showToast('Password changed'); } else showToast('Wrong password'); }
 function openAdminPanel(){ document.getElementById('adminOverlay').classList.add('open'); if(adminLoggedIn) showAdminDash(); else { document.getElementById('adminLoginPanel').style.display='block'; document.getElementById('adminDash').style.display='none'; } }
 function doAdminLogin(){ let user=document.getElementById('adminUser').value, pwd=document.getElementById('adminPwd').value; if(user==='admin' && pwd==='admin123'){ adminLoggedIn=true; localStorage.setItem('azam_admin_session','true'); showAdminDash(); } else showToast('Wrong credentials! Use admin/admin123'); }
 function doAdminLogout(){ adminLoggedIn=false; localStorage.removeItem('azam_admin_session'); document.getElementById('adminLoginPanel').style.display='block'; document.getElementById('adminDash').style.display='none'; }
-function showAdminDash(){ 
-  document.getElementById('adminLoginPanel').style.display='none'; 
-  document.getElementById('adminDash').style.display='block'; 
-  updateStats(); loadAdminProducts(); loadAdminOrders(); loadInvoices(); loadAdminCustomers(); loadEnquiriesList(); 
-  document.getElementById('defaultCourier').value=settings.defaultCourier; 
-  document.getElementById('freeMin').value=settings.freeMin; 
-  document.getElementById('whatsappNo').value=settings.whatsappNo; 
-}
+function showAdminDash(){ document.getElementById('adminLoginPanel').style.display='none'; document.getElementById('adminDash').style.display='block'; updateStats(); loadAdminProducts(); loadAdminOrders(); loadInvoices(); loadAdminCustomers(); loadEnquiriesList(); document.getElementById('defaultCourier').value=settings.defaultCourier; document.getElementById('freeMin').value=settings.freeMin; document.getElementById('whatsappNo').value=settings.whatsappNo; }
 function sendBulkEnquiry(){ let name=document.getElementById('bulkName').value, phone=document.getElementById('bulkPhone').value, msg=document.getElementById('bulkMessage').value; if(!name||!phone) return; bulkEnquiries.unshift({id:Date.now(), name, phone, message:msg, date:new Date().toLocaleString()}); saveBulk(); window.open(`https://wa.me/${settings.whatsappNo}?text=Enquiry from ${name}: ${msg}`,'_blank'); closeBulkEnquiryModal(); showToast('Enquiry sent'); }
 function closeBulkEnquiryModal(){ document.getElementById('bulkEnquiryModal').classList.remove('open'); }
 function closeCart(){ document.getElementById('cartSidebar').classList.remove('open'); document.getElementById('overlay').classList.remove('open'); }
@@ -626,7 +477,7 @@ function openCart(){ document.getElementById('cartSidebar').classList.add('open'
 document.getElementById('cartOpenBtn')?.addEventListener('click', openCart);
 document.getElementById('cartCloseBtn')?.addEventListener('click', closeCart);
 document.getElementById('overlay')?.addEventListener('click', closeCart);
-document.getElementById('waOrderBtn')?.addEventListener('click', placeOrderAndSendBill);
+document.getElementById('waOrderBtn')?.addEventListener('click', sendWhatsAppOrder);
 document.getElementById('commercialEnqBtn')?.addEventListener('click', () => document.getElementById('bulkEnquiryModal').classList.add('open'));
 document.getElementById('hamburgerBtn')?.addEventListener('click', () => { let m=document.getElementById('mobileMenu'); m.style.display = m.style.display === 'flex' ? 'none' : 'flex'; });
 document.getElementById('adminNavBtn')?.addEventListener('click', openAdminPanel);
